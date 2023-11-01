@@ -23,7 +23,7 @@
                         </li> -->
                         <li class="header__info--list">
                             <a class="header__info--link" th:href="@{#}">
-                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.368 9.104C7.26133 9.17867 7.13867 9.216 7 9.216C6.86133 9.216 6.744 9.17867 6.648 9.104L0.36 4.624C0.264 4.56 0.178667 4.54933 0.104 4.592C0.04 4.624 0.00800002 4.69867 0.00800002 4.816V11.984C0.00800002 12.112 0.0506667 12.2187 0.136 12.304C0.221333 12.3893 0.322667 12.432 0.44 12.432H13.56C13.6773 12.432 13.7787 12.3893 13.864 12.304C13.96 12.2187 14.008 12.112 14.008 11.984V4.816C14.008 4.69867 13.9707 4.624 13.896 4.592C13.8213 4.54933 13.736 4.56 13.64 4.624L7.368 9.104ZM6.76 8.32C6.84533 8.37333 6.92533 8.4 7 8.4C7.08533 8.4 7.16533 8.37333 7.24 8.32L12.52 4.56C12.6373 4.464 12.696 4.352 12.696 4.224V0.783999C12.696 0.666666 12.6533 0.570666 12.568 0.495999C12.4933 0.410666 12.3973 0.367999 12.28 0.367999H1.72C1.60267 0.367999 1.50667 0.410666 1.432 0.495999C1.35733 0.570666 1.32 0.666666 1.32 0.783999V4.224C1.32 4.37333 1.37333 4.48533 1.48 4.56L6.76 8.32ZM3.784 2.064H9.96C10.088 2.064 10.1947 2.112 10.28 2.208C10.3653 2.29333 10.408 2.4 10.408 2.528C10.408 2.64533 10.3653 2.74667 10.28 2.832C10.1947 2.91733 10.088 2.96 9.96 2.96H3.784C3.656 2.96 3.54933 2.91733 3.464 2.832C3.37867 2.74667 3.336 2.64533 3.336 2.528C3.336 2.4 3.37867 2.29333 3.464 2.208C3.54933 2.112 3.656 2.064 3.784 2.064ZM3.784 3.632H9.96C10.088 3.632 10.1947 3.68 10.28 3.776C10.3653 3.86133 10.408 3.96267 10.408 4.08C10.408 4.19733 10.3653 4.304 10.28 4.4C10.1947 4.48533 10.088 4.528 9.96 4.528H3.784C3.656 4.528 3.54933 4.48533 3.464 4.4C3.37867 4.31467 3.336 4.21333 3.336 4.096C3.336 3.968 3.37867 3.86133 3.464 3.776C3.54933 3.68 3.656 3.632 3.784 3.632Z" fill="#FF2D37"/>
                                 </svg>
                                  tfive@gmail.com</a>
@@ -31,7 +31,7 @@
                     </ul>
                     <div class="header__top--right d-flex align-items-center">
                         <ul class="header__top--link d-flex align-items-center">
-                            <li class="header__link--menu"><a class="header__link--menu__text" th:href="@{/tfive/wish-list}">
+                            <li class="header__link--menu"><a class="header__link--menu__text btn-username" th:href="@{/tfive/wish-list}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>Yêu thích</a>
                             </li>
                         </ul>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="main__logo">
                         <h1 class="main__logo--title"><a class="main__logo--link" th:href="@{/tfive/}">
-                            <div class="main__logo--container" style=" display: flex;
+                        <div class="main__logo--container" style=" display: flex;
                             align-items: center;">
                                 <img class="main__logo--img" style="height: 60px;" src="/assets/img/logo/logo-none-background.png" alt="logo-img">
                                 <span class="main__logo--text" style="font-size: 26px;">TFive</span>
@@ -101,17 +101,6 @@
                     </div>
                     <div class="header__search--widget d-none d-lg-block header__sticky--none">
                         <form class="d-flex header__search--form border-radius-5" action="#">
-                            <div class="header__select--categories select">
-                                <select class="header__select--inner">
-                                    <option selected value="1"> Danh mục món</option>
-                                    <option value="2">Coffe</option>
-                                    <option value="3">Kem</option>
-                                    <option value="4">Trà</option>
-                                    <option value="7">Nước ép</option>
-                                    <option value="6">Đặc biệt</option>
-                                    <option value="5">Đồ ăn vặt</option>
-                                </select>
-                            </div>
                             <div class="header__search--box">
                                 <label>
                                     <input class="header__search--input" placeholder="Tên món........." type="text">
@@ -128,7 +117,7 @@
                         <nav class="header__menu--navigation">
                             <ul class="header__menu--wrapper d-flex">
                                 <li class="header__menu--items">
-                                    <a class="header__menu--link active" th:href="@{/tfive/}">Trang chủ
+                                    <a class="header__menu--link" th:href="@{/tfive/}">Trang chủ
                                     </a>
                                 </li>
                                 <li class="header__menu--items mega__menu--items">
@@ -176,13 +165,12 @@
                                         <!-- MÓN SALE -->
                                         <li class="header__mega--menu__li fullscreen__style d-flex">
                                             <a class="header__mega--menu__banner display-block" th:href="@{/tfive/menu}"><img class="header__mega--menu__banner--img" src="/assets/img/banner/banner1.webp" alt="banner-menu">
-                                                <div class="banner__content">
+                                            <div class="banner__content">
                                                     <span class="banner__content--subtitle text__secondary mb-10">20% off</span>
                                                     <h2 class="banner__content--title"><span class="banner__content--title__inner">New</span> COLLECTION</h2>
                                                     <span class="banner__content--price">$22.99</span>
                                                 </div>
                                             </a>
-                                            <a class="header__mega--menu__banner display-block" th:href="@{/tfive/menu}"><img class="header__mega--menu__banner--img" src="/assets/img/banner/banner2.webp" alt="banner-menu">
                                                 <div class="banner__content right">
                                                     <span class="banner__badge--style2">20% Off</span>
                                                     <h2 class="banner__content--title"><span class="banner__content--title__inner"> ON </span> SALE <br> PRODUCT</h2>
@@ -208,7 +196,8 @@
                                     </ul>
                                 </li>
                                 <li class="header__menu--items">
-                                    <a class="header__menu--link" th:href="@{/tfive/account/driver-register}">Tuyển dụng</a>
+                                    <a class="header__menu--link" th:href="@{/tfive/account/driver-register/view}">Tuyển dụng</a>
+
                                 </li>
                             </ul>
                         </nav>
@@ -216,9 +205,11 @@
                     <div class="header__account header__sticky--none">
                         <ul class="header__account--wrapper d-flex align-items-center">
                             <li class="header__account--items d-none d-lg-block">
-                                <a class="header__account--btn" th:href="@{/tfive/profile}">
+                                <a class="header__account--btn btn-username" th:href="@{/tfive/profile}" >
+
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                     <span class="visually-hidden">My account</span> 
+                                    <span th:if="${username != null or username != ''}" th:text="${#httpSession.getAttribute('username')}"></span>
                                 </a>
                             </li>
                             <li class="header__account--items  header__account--search__items mobile__d--block d-sm-2-none">
@@ -229,6 +220,7 @@
                             </li>
                             <li class="header__account--items d-none d-lg-block">
                                 <a class="header__account--btn" th:href="@{/tfive/wish-list}">
+
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                                     <span class="items__count">3</span> 
                                 </a>
@@ -259,9 +251,10 @@
                                 </a>
                             </li>
                             <li class="header__account--items d-none d-lg-block">
-                                <a class="header__account--btn" th:href="@{/tfive/profile}">
+                                <a class="header__account--btn btn-username" th:href="@{/tfive/profile}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                     <span class="visually-hidden">My account</span> 
+                                    <span th:if="${username != null or username != ''}" th:text="${#httpSession.getAttribute('username')}"></span>
                                 </a>
                             </li>
                             <li class="header__account--items d-none d-lg-block">
@@ -296,7 +289,7 @@
                         <nav class="header__menu--navigation">
                             <ul class="header__menu--wrapper d-flex">
                                 <li class="header__menu--items">
-                                    <a class="header__menu--link active" th:href="@{/tfive/}">Trang chủ
+                                    <a class="header__menu--link" th:href="@{/tfive/}">Trang chủ
                                     </a>
                                 </li>
                                 <li class="header__menu--items mega__menu--items">
@@ -344,6 +337,7 @@
                                         <!-- MÓN SALE -->
                                         <li class="header__mega--menu__li fullscreen__style d-flex">
                                             <a class="header__mega--menu__banner display-block" th:href="@{/tfive/menu}"><img class="header__mega--menu__banner--img" src="/assets/img/banner/banner1.webp" alt="banner-menu">
+
                                                 <div class="banner__content">
                                                     <span class="banner__content--subtitle text__secondary mb-10">20% off</span>
                                                     <h2 class="banner__content--title"><span class="banner__content--title__inner">New</span> COLLECTION</h2>
@@ -351,6 +345,7 @@
                                                 </div>
                                             </a>
                                             <a class="header__mega--menu__banner display-block" th:href="@{/tfive/menu}"><img class="header__mega--menu__banner--img" src="/assets/img/banner/banner2.webp" alt="banner-menu">
+
                                                 <div class="banner__content right">
                                                     <span class="banner__badge--style2">20% Off</span>
                                                     <h2 class="banner__content--title"><span class="banner__content--title__inner"> ON </span> SALE <br> PRODUCT</h2>
@@ -364,6 +359,7 @@
                                 </li>
                                 <li class="header__menu--items">
                                     <a class="header__menu--link" th:href="@{#}">Về chúng tôi 
+
                                         <svg class="menu__arrowdown--icon" xmlns="http://www.w3.org/2000/svg" width="12" height="7.41" viewBox="0 0 12 7.41">
                                             <path  d="M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7"/>
                                         </svg>
@@ -376,7 +372,8 @@
                                     </ul>
                                 </li>
                                 <li class="header__menu--items">
-                                    <a class="header__menu--link" th:href="@{/tfive/account/driver-register}">Tuyển dụng</a>
+                                    <a class="header__menu--link" th:href="@{/tfive/account/driver-register/view}">Tuyển dụng</a>
+
                                 </li>
                             </ul>
                         </nav>
@@ -423,11 +420,13 @@
                         </li>
                         <li class="offcanvas__menu_li">
                             <a class="offcanvas__menu_item" th:href="@{/tfive/menu}">Thực đơn</a>
+
                             <ul class="offcanvas__sub_menu">
                                 <li class="offcanvas__sub_menu_li">
                                     <a href="#" class="offcanvas__sub_menu_item">Coffe</a>
                                     <ul class="offcanvas__sub_menu">
                                         <li class="offcanvas__sub_menu_li"><a class="offcanvas__sub_menu_item" th:href="@{/tfive/menu}">Coffe Phine</a></li>
+
                                         <li class="offcanvas__sub_menu_li"><a class="offcanvas__sub_menu_item" href="shop-right-sidebar.html">Coffe Espresso</a></li>
                                     </ul>
                                 </li>
@@ -473,10 +472,11 @@
                                 <li class="header__sub--menu__items"><a th:href="@{/tfive/faq}" class="header__sub--menu__link">Câu hỏi thường gặp</a></li>
                             </ul>
                         </li>
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" th:href="@{/tfive/account/driver-register}">Tuyển dụng</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" th:href="@{/tfive/account/driver-register/view}">Tuyển dụng</a></li>
                     </ul>
                     <div class="offcanvas__account--items">
                         <a class="offcanvas__account--items__btn d-flex align-items-center" th:href="@{/tfive/account/login}">
+
                             <span class="offcanvas__account--items__icon"> 
                                 <svg xmlns="http://www.w3.org/2000/svg"  width="20.51" height="19.443" viewBox="0 0 512 512"><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg> 
                             </span>
@@ -493,6 +493,7 @@
             <ul class="d-flex justify-content-between">
                 <li class="offcanvas__stikcy--toolbar__list">
                     <a class="offcanvas__stikcy--toolbar__btn" th:href="@{/tfive/}">
+
                     <span class="offcanvas__stikcy--toolbar__icon"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="21.51" height="21.443" viewBox="0 0 22 17"><path fill="currentColor" d="M20.9141 7.93359c.1406.11719.2109.26953.2109.45703 0 .14063-.0469.25782-.1406.35157l-.3516.42187c-.1172.14063-.2578.21094-.4219.21094-.1406 0-.2578-.04688-.3515-.14062l-.9844-.77344V15c0 .3047-.1172.5625-.3516.7734-.2109.2344-.4687.3516-.7734.3516h-4.5c-.3047 0-.5742-.1172-.8086-.3516-.2109-.2109-.3164-.4687-.3164-.7734v-3.6562h-2.25V15c0 .3047-.11719.5625-.35156.7734-.21094.2344-.46875.3516-.77344.3516h-4.5c-.30469 0-.57422-.1172-.80859-.3516-.21094-.2109-.31641-.4687-.31641-.7734V8.46094l-.94922.77344c-.11719.09374-.24609.14062-.38672.14062-.16406 0-.30468-.07031-.42187-.21094l-.35157-.42187C.921875 8.625.875 8.50781.875 8.39062c0-.1875.070312-.33984.21094-.45703L9.73438.832031C10.1094.527344 10.5312.375 11 .375s.8906.152344 1.2656.457031l8.6485 7.101559zm-3.7266 6.50391V7.05469L11 1.99219l-6.1875 5.0625v7.38281h3.375v-3.6563c0-.3046.10547-.5624.31641-.7734.23437-.23436.5039-.35155.80859-.35155h3.375c.3047 0 .5625.11719.7734.35155.2344.211.3516.4688.3516.7734v3.6563h3.375z"></path></svg>
                         </span>
@@ -534,6 +535,7 @@
                 </li>
                 <li class="offcanvas__stikcy--toolbar__list">
                     <a class="offcanvas__stikcy--toolbar__btn" th:href="@{/tfive/wish-list}">
+
                         <span class="offcanvas__stikcy--toolbar__icon"> 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </span>
@@ -612,6 +614,7 @@
             <div class="minicart__button d-flex justify-content-center">
                 <a class="primary__btn minicart__button--link" th:href="@{/tfive/cart}">Xem giỏ hàng</a>
                 <a class="primary__btn minicart__button--link" th:href="@{/tfive/checkout}">Thanh toán</a>
+
             </div>
         </div>
         <!-- End offCanvas minicart -->

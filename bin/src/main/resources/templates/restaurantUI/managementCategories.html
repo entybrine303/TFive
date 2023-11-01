@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{restaurantForm.html}">
+<head>
+<title>QUẢN LÝ DANH MỤC MÓN</title>
+</head>
+
+
+<body>
+    <section layout:fragment="body">
+        <main>
+            <div class="container box-main">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#management-categories" role="tab"
+                            aria-controls="management-categories" aria-selected="true">Quản lý danh mục món</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#list-categories" role="tab"
+                            aria-controls="list-categories" aria-selected="false">Danh sách danh mục món</a></li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+    
+                    <div class="tab-pane fade show active" id="management-categories" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="/admin/products/saveOrUpdate" method="post" class="card container form-management"
+                            enctype="multipart/form-data" >
+                                <div class="box-l">
+    
+                                    <label for="categories-id">ID Danh mục món </label>
+                                    <input type="text" id="categories-id" class="form-control" name="productId"
+                                       >
+                                    <label for="categories-name">Tên danh mục</label>
+                                    <input type="text" id="categories-name" class="form-control" name="name" >
+                                    
+                                </div>
+    
+                            <div class="box-btn">
+    
+                                <button class="btn btn-info">Save</button>
+    
+                                <a><button type="reset" class="btn btn-primary">Reset</button></a>
+    
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="tab-pane fade" id="list-categories" role="tabpanel" aria-labelledby="profile-tab">
+                        <table class="table tbl-cart">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">ID Món</th>
+                                    <th scope="col">Tên danh mục</th>
+                                    <th scope="col">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td scope="row" >C123</td>
+                                    <td scope="row" >Coffe</td>
+                                    <td><a class="edit">Edit</a>
+                                        | <a>Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </main>
+
+    </section>
+
+</body>
+
+</html>

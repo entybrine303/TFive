@@ -1,0 +1,258 @@
+
+.bland{
+    opacity: 0.4;
+}
+
+p{
+    margin: 0;
+}
+
+.fs-16{
+    font-size: 16px;
+}
+
+
+.banner__content--style4{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.old__price{
+    text-decoration: line-through;
+}
+
+.btn-detail{
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+    font-size: 18px;
+    border: 1px #fff solid;
+}
+
+.btn-detail:hover{
+    background-color: #fff;
+    color: black;
+    border: 1px black solid;
+}
+
+.btn-detail-mobile{
+    margin-top: 10px;
+    padding: 6px 0;
+    width: 100%;
+}
+
+.card-container{
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.card-account {
+    height: 560px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+.card-front {
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+section> .container{
+    margin-bottom: 30px;
+}
+
+.order-status-list{
+    text-align: center;
+}
+
+.order-status-list i{
+    padding: 10px;
+    border-bottom: 2px black solid;
+    font-size: 30px;
+}
+
+.order-status-list p{
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.order-status-list span{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.this-step{
+    color: red;
+    font-weight: bold;
+}
+
+
+.this-step i{
+    border-bottom: 4px red solid;
+}
+
+.passed-step{
+    opacity: 0.6;
+}
+
+
+.driver-info{
+    padding: 10px;
+}
+
+.driver-info .driver-avt{
+    border: 2px black solid;
+    border-radius: 60%;
+}
+
+.driver-info .driver-name{
+    text-transform: capitalize;
+}
+
+.rating{
+    gap: 0.2rem;
+}
+
+.customer-info,
+.box-driver-detail{
+    border-right: 1px gainsboro solid;
+}
+
+.order-bill{
+    text-align: right;
+}
+
+.btn-contact{
+    background: none;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.btn-contact:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.list-phone-number> a{
+    padding: 10px 10px 10px;
+    width: 200px !important;
+}
+
+
+.list-phone-number span{
+    float: right;
+}
+
+.box-customer-info table{
+    font-size: 14px;
+}
+
+.box-customer-info table .td-left {
+    text-align: right;
+    padding-right: 18px;
+}
+
+.box-edit-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-edit-img img{
+    border: 1px black solid;
+    border-radius: 60%;
+}
+
+.box-edit-img .btn-select-img{
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 4px 8px;
+    border: 1px gray solid;
+    background: none;
+    border-radius: 8px;
+}
+
+.box-edit-img .btn-select-img:hover{
+    border: 1px red solid !important;
+    color: red;
+}
+
+
+
+.c--box{
+    margin: 40px 0;
+}
+
+.box-form{
+    
+}
+
+.box-register{
+    border-radius: 10px;
+    border: 1px black solid;
+    padding: 14px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.box-register input{
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+
+.box-register .btn-register{
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: red;
+    color: #fff;
+    font-weight: bold;
+}
+
+.box-intro{
+    
+}
+
+.box-intro h2{
+    margin-top: 20px;
+}
+
+.box-intro .c-btn-register{
+    border: 1px black solid;
+    padding: 8px 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 14px;
+    display: inline-block;
+}
+
+.box-intro .c-btn-register:hover{
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 739px) {
+    .box-intro{
+        display: none;
+    }
+}

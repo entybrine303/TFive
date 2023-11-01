@@ -1,5 +1,6 @@
 package graduate.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -13,12 +14,22 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import graduate.utils.Sub;
 @Controller
 @RequestMapping("tfive")
 public class CartController {
+
+	@Autowired
+	private HttpSession session;
+	
+	@Autowired
+	private HttpServletRequest request;
 	
 	@GetMapping("cart")
 	public String viewCart(ModelMap model) {
+		Sub sub=new Sub();
+		sub.checkUsername(request);
 		
 		return "customerUI/cart";
 	}

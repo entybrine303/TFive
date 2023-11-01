@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{restaurantForm.html}">
+<head>
+<title>QUẢN LÝ KHÁCH HÀNG</title>
+<link rel="stylesheet" href="/assets/css/common.css">
+</head>
+
+<body>
+    <section layout:fragment="body">
+        <nav class="nav-search w-100">
+            <form action="">
+                <div class="box-search">
+                    <input class="input-search" type="text" placeholder="Tìm kiếm.....">
+                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+    
+        </nav>
+    
+        <main class="mt-74">
+            <div class="container box-main">
+                <div class="" id="list-customer">
+                    <table class="table tbl-cart">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID Khách</th>
+                                <th scope="col">Họ và tên</th>
+                                <th scope="col">Giới tính</th>
+                                <th scope="col">Số điện thoại</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr >
+                                <td scope="row">123</td>
+                                <td scope="row">Nguyễn Minh Thành</td>
+                                <td>Nam</td>
+                                <td>0708116524</td>
+                                <td>thanhducam@gmail.com</td>
+                                <td><a class="edit" >Chat</a>
+                                    | <a>Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+        </main>
+    </section>
+
+</body>
+
+</html>

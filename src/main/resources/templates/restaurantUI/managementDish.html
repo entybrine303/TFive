@@ -18,32 +18,46 @@
                 <div class="tab-content" id="myTabContent">
     
                     <div class="tab-pane fade show active" id="management-dish" role="tabpanel" aria-labelledby="home-tab">
-                        <form action="/admin/products/saveOrUpdate" method="post" class="card container form-management"
+                        <form th:action="@{/tfive/admin/dish/saveOrUpdate}" method="post"
+                              class="card container form-management" th:object="${dish}"
                             enctype="multipart/form-data">
+                            
                             <div class="row">
                                 <div class="box-l col-sm-7">
-    
-                                    <label for="dish-id">ID Món </label>
-                                    <input type="text" id="dish-id" class="form-control" name="productId"
-                                        >
-                                    <label for="dish-name">Tên món </label>
-                                    <input type="text" id="dish-name" class="form-control" name="name" >
+                                        <input type="hidden" th:field="*{isEdit}" name="isEdit" >
+                                
+                                 
+                                    <label for="dishID" >ID Món </label>
+                          <input type="text" class="form-control" id="dishID" placeholder="ID Món"
+                          th:readonly="${dish.isEdit}" th:field="*{dishID}" name="dishID" >
+                                        
+                                    <label for="name">Tên món </label>
+                                    <input th:field="*{name}" type="text" id="name" class="form-control" name="name" >
+
                                     <label for="price">Giá </label>
-                                    <input type="number" id="price" class="form-control" name="price" >
-                                    <label for="categories">Danh mục món</label>
-                                    <select id="categories" class="form-control t-select" name="facture"
-                                        >
-                                        <option value="Samsung">Samsung</option>
-                                        <option value="Xiaomi">Xiaomi</option>
+                                    <div class="input-group form-group">
+                                        <input th:field="*{price}" type="number" id="price" class="form-control" name="price" >
+                                        <span class="input-group-text">$</span>
+                                    </div>
+
+                                    <label for="categoriesID">Danh mục món</label>
+                                    <select class="form-control" name="ccategoriesID" id="categoriesID" th:field="*{categoriesID}">
+                                        <option th:each="item : ${categories}" th:value="${item.categoriesID}"
+                                                th:text="${item.name}" th:selected="${item.categoriesID == dish.categoriesID}">Category Name</option>
+
                                     </select>
-                                    <label for="status">Trạng thái</label>
-                                    <select id="status" name="facture" class="form-control t-select" >
-                                        <option value="iPhone">Còn món</option>
-                                        <option value="Samsung">Tạm hết</option>
+                                
+                                    <label for="status">Trạng Thái</label>
+                                    <select class="form-control" name="status" id="status" th:field="*{status}">
+                                        <option value="1">Còn món</option>
+                                        <option value="0">Tạm hết</option>
+
+
                                     </select>
+
                                     <label for="description" class="w-100">Mô tả của món
                                     </label>
-                                    <textarea class="w-100" id="description" rows="4" name="description"></textarea>
+                                    <textarea th:field="*{description}" class="w-100" id="description" rows="4" name="description"></textarea>
                                 </div>
     
                                 <div class="box-r col-sm-5">
@@ -53,7 +67,7 @@
                                                 && fileInput.files[0]) {
                                                 var reader = new FileReader();
                                                 reader.onload = function (e) {
-                                                    $('#img-product').attr(
+                                                    $('#image').attr(
                                                         'src',
                                                         e.target.result);
                                                 }
@@ -63,22 +77,36 @@
                                             }
                                         }
                                     </script>
+                                   
                                     <div class="box-img">
-                                        <img id="img-product" alt=""
-                                        src="/assets/img/product/main-product/product1.webp"
-                                            width="80%"> 
-                                            <input type="file" onchange="chooseFile(this)" name="imgFile">
+                                     
+                                        
+                                         <img id="image" 
+                                th:src="${dish.isEdit && dish.img != null ? '/assets/img/uploads/' + dish.img : '/assets/img/product/main-product/product1.webp'}"
+                                src="/assets/img/product/main-product/product1.webp" width="90%" alt="">
+                                
+                                
+                                
+                                            <input type="file" onchange="chooseFile(this)" name="imageFile"
+                                               id="img" placeholder="productImage">
+                                           
                                     </div>
+                                     
+
+                               
                                 </div>
     
                             </div>
     
+
+
                             <div class="box-btn">
-    
-                                <button class="btn btn-info">Save</button>
-    
-                                <a><button type="reset" class="btn btn-primary">Reset</button></a>
-    
+
+                                <button class="btn btn-info" th:text="${dish.isEdit? 'Update' : 'Save'}">Save</button>
+                                <a><button th:if="${dish.isEdit==false}" type="reset" class="btn btn-primary" >Reset</button></a>
+                                <a th:if="${dish.isEdit==true}" type="button" class="btn btn-primary" th:href="@{/tfive/admin/dish/view}">Reset</a>
+                                <a style="background-color:#ED1D24" th:if="${dish.isEdit==true}" type="button" class="btn btn-primary" th:href="@{'/tfive/admin/dish/delete/' + ${dish.dishID}}">Delete</a>
+
                             </div>
                         </form>
                     </div>
@@ -87,6 +115,7 @@
                         <table class="table tbl-cart">
                             <thead class="thead-light">
                                 <tr>
+                                    <th scope="col">Anh</th>
                                     <th scope="col">ID Món</th>
                                     <th scope="col">Tên món</th>
                                     <th scope="col">Giá</th>
@@ -96,14 +125,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr >
-                                    <td scope="row">D123</td>
-                                    <td scope="row">Bánh mì</td>
-                                    <td>13.000</td>
-                                    <td>Đồ ăn vặt</td>
-                                    <td>Còn món</td>
-                                    <td><a class="edit" >Edit</a>
-                                        | <a >Delete</a>
+                                <tr th:each="item : ${dishs}">
+                                    <td scope="row"><img  th:src="@{/assets/img/uploads/} + ${item.img}"  width="100" height="60"/></td>
+                                   
+                                        
+                                    <td scope="row" th:text="${item.dishID}"></td>
+                                    <td scope="row" th:text="${item.name}"></td>
+                                    <td th:text="${#numbers.formatDecimal(item.price, 0, 'COMMA', 0, 'POINT')} + ' VNĐ'"></td>
+                                    <td th:text="${item.categoriesID.name}"></td>
+                                    <td th:text="${item.status == true ? 'Còn món' : 'Hết món'}"></td>
+                                    <td><a class="edit" th:href="@{'/tfive/admin/dish/edit/' + ${item.dishID}}">Edit</a>
+                                        | <a th:href="@{'/tfive/admin/dish/delete/' + ${item.dishID}}">Delete</a>
                                     </td>
                                 </tr>
                             </tbody>

@@ -1,0 +1,185 @@
+.payment{
+    color: red;
+}
+
+.collect{
+    color: green;
+}
+
+/* BTN FUNCTION */
+.box-func-btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.box-func-btn ul{
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: space-between; /* Các phần tử con sẽ được căn đều và cách nhau theo ngang */
+    list-style: none; /* Loại bỏ dấu chấm tròn mặc định của thẻ ul */
+    padding: 0; /* Loại bỏ padding mặc định của thẻ ul */
+    margin: 0;
+}
+
+.box-func-btn li{
+    /* display: inline-block; */
+    flex: 1;
+}
+
+.box-func-btn .btn-func{
+    box-shadow: 0 0 0 0.1px #000;
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 6px 0;
+}
+
+.list-func-btn{
+
+}
+
+
+.list-func-btn span{
+    font-size: 14px;
+}
+
+/* SUB FUNCTION */
+.box-sub-func{
+
+}
+
+.box-sub-func .btn-close{
+    padding: 10px 18px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    float: right;
+    border: none;
+}
+
+.sub-func{
+    background-color: #fff;
+    position: fixed;
+    bottom: 134px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-top: 1px gray solid;
+    display: none;
+
+}
+
+
+.sub-func strong{
+    font-size: 22px;
+}
+
+.sub-func li{
+    padding: 0 20px;
+}
+
+
+.sub-func p{
+    padding: 20px 6px;
+}
+
+.func-number-phone{
+    list-style: none;
+}
+
+.func-number-phone a{
+    float: right;
+}
+
+/* NAV */
+.tabs{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+}
+
+
+.restaurant-link.active{
+    color: red !important;
+}
+
+.customer-link.active{
+    color: green !important;
+}
+
+.t-nav{
+    text-align: center;
+}
+
+.t-nav .order-id{
+    font-size: 14px;
+}
+
+.box-ctn-info{
+    padding-top: 14px;
+}
+
+.box-ctn-info p{
+    padding: 2px 20px;
+}
+
+.btn-status{
+    width: 90%;
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    margin: 6px 0;
+}
+
+/* CONTENT */
+.ctn-order{
+    margin-top: 214px;
+    padding: 4px 8px;
+    background-color: #F5F5F5;
+}
+
+.head-order,
+.body-order{
+    margin: 0 4px;
+}
+
+.head-order .status,
+.head-order .time{
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.box-order-detail,
+.box-bill{
+    padding: 2px 20px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.box-bill p{
+    padding: 4px 0;
+    font-size: 16px;
+}
+
+.box-bill span{
+    float: right;
+}
+
+.dollar-icon{
+    border-radius: 20px;
+    background-color: orange;
+    padding: 6px 9px;
+    color: #fff;
+}
+
+

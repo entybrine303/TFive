@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{restaurantForm.html}">
+<head>
+<title>QUẢN LÝ TÀI XẾ</title>
+<link rel="stylesheet" href="/assets/css/common.css">
+</head>
+<body>
+    <section layout:fragment="body">
+        <nav class="nav-search w-100">
+            <form action="">
+                <div class="box-search">
+                    <input class="input-search" type="text" placeholder="Tìm kiếm.....">
+                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+    
+        </nav>
+    
+        <main class="mt-74">
+            <div class="box-main">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#management-driver" role="tab"
+                            aria-controls="management-driver" aria-selected="true">Quản lý tài xế</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#confirm-driver" role="tab"
+                            aria-controls="confirm-driver" aria-selected="false">Đơn đăng kí</a></li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+    
+                    <div class="tab-pane fade show active" id="management-driver" role="tabpanel" aria-labelledby="home-tab">
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Họ và tên</th>
+                                    <th scope="col">Giới tính</th>
+                                    <th scope="col">Sđth</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">123</td>
+                                    <td scope="row">Nguyễn Minh Thành</td>
+                                    <td>Nam</td>
+                                    <td>0708116524</td>
+                                    <td>thanhducam@gmail.com</td>
+                                    <td><a data-toggle="collapse" href="#tbl-sub" role="button" aria-expanded="false"
+                                            class="edit" ><i
+                                                class="fa-solid fa-angles-down"></i></a>
+                                        | <a class="edit" >Chat</a>
+                                        | <a >Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="collapse" id="tbl-sub">
+                            <table class="table tbl-sub-info">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Trạng thái</th>
+                                        <th scope="col">CCCD</th>
+                                        <th scope="col">GP lái xe</th>
+                                        <th scope="col">Loại xe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr >
+                                        <td>Online</td>
+                                        <td scope="row">123456 <i
+                                                class="fa-solid fa-eye-slash"></i>
+                                        </td>
+                                        <td scope="row">abc-123 <i class="fa-solid fa-eye-slash"></i>
+                                        </td>
+                                        <td>SH Mode</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <div class="tab-pane fade" id="confirm-driver" role="tabpanel" aria-labelledby="profile-tab">
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Họ và tên</th>
+                                    <th scope="col">Giới tính</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Sđth</th>
+                                    <th scope="col">CCCD</th>
+                                    <th scope="col">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td scope="row">Nguyễn Minh Thành</td>
+                                    <td>Nam</td>
+                                    <td>thanhducam@gmail.com</td>
+                                    <td>0708116524</td>
+                                    <td>0708116524 <i class="fa-solid fa-eye-slash"></i></td>
+                                    <td><a class="edit" >Xác nhận</a>
+                                        | <a >Từ chối</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </main>
+        
+    </section>
+
+</body>
+
+</html>

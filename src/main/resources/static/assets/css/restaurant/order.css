@@ -125,6 +125,13 @@ main{
 
 }
 
+.box-note{
+    margin: 10px 4px;
+    padding: 20px;
+    background-color: #FEF8E2;
+    border-radius: 10px;
+}
+
 .order-bottom{
 
 }
@@ -134,6 +141,8 @@ main{
     padding: 10px;
     background-color: #FEF8E2;
 }
+
+
 
 .btn-detail{
     position: absolute;

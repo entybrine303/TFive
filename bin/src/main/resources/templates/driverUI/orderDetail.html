@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn hàng</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="/assets/icons/themify-icons/themify-icons.css">
+    <script src="https://kit.fontawesome.com/cac033d21b.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/driver/orderDetail.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/driverUI/orderDetail.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="box-sub-func">
+            <ul class="sub-func func-number-phone" id="func-number-phone">
+                <li style="padding-right: 0;"><strong style="line-height: 50px;">Số điện thoại</strong> <button class="btn-close" onclick="closeFunc(event)"><i class="fa-solid fa-xmark"></i></button></li>
+                <li><p>Quán: <a href="#" class="hover-none restaurant-number-phone">0987654321</a></p></li>
+                <li><p>Khách hàng: <a href="#" class="hover-none customer-number-phone">0987654321</a></p></li>
+            </ul>
+            <ul class="sub-func func-cancel-order" id="func-cancel-order">
+              <li style="padding-right: 0;"><strong style="line-height: 50px;">Lý do huỷ đơn</strong> <button class="btn-close" onclick="closeFunc(event)"><i class="fa-solid fa-xmark"></i></button></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <p><i class="fa-solid fa-shop-slash"></i> Quán đóng cửa </p>
+                <i class="ti-angle-right"></i>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <p><i class="fa-solid fa-user-slash"></i> Khách yêu cầu huỷ </p>
+                <i class="ti-angle-right"></i>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <p><i class="fa-solid fa-user-xmark"> </i> Lý do cá nhân </i></p>
+                <i class="ti-angle-right"></i>
+              </li>
+          </ul>
+        </div>
+
+        <div class="box-func-btn">
+            <ul>
+                <li class="list-func-btn" onclick="displayNumberPhone()"><button class="btn-func"><i class="fa-solid w-100 fa-phone"></i><span>Điện thoại</span> </button>                </li>
+                <li class="list-func-btn" ><button class="btn-func" ><i class="fa-solid w-100 fa-comment"></i><span>Chat</span></button></li>
+                <li class="list-func-btn" onclick="displayCancelOrder()"><button class="btn-func"><i class="fa-solid w-100 fa-circle-xmark"></i><span>Huỷ đơn</span></button></li>
+                <li class="list-func-btn"><button class="btn-func"><i class="fa-solid w-100 fa-file-pen"></i><span>Sửa đơn</span></button></li>
+            </ul>
+            <button class="btn-status"><span>Trạng thái</span></button>
+        </div>
+        <div class="tabs">
+            <ul class="t-nav nav nav-tabs w-100" id="myTab" role="tablist">
+                <li class="t-nav-item nav-item w-50">
+                  <a class="nav-link active restaurant-link" data-toggle="tab" href="#restaurant" role="tab" aria-controls="restaurant" aria-selected="true">
+                    <p class="bold">Quán</p>
+                    <p class="order-id">123456789</p>
+                  </a>
+                </li>
+                <li class="t-nav-item nav-item w-50">
+                  <a class="nav-link customer-link" data-toggle="tab" href="#customer" role="tab" aria-controls="customer" aria-selected="false">
+                    <p class="bold">Khách hàng</p>
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content box-ctn-info" id="myTabContent">
+                <div class="tab-pane fade show active" id="restaurant" role="tabpanel" >
+                    <p class="bland restaurant-name">Tên quán</p>
+                    <p class="bold restaurant-locate">Địa chỉ quán</p>
+                    <hr>
+                    <p>Trả: <span class="payment">0</span></p>
+                    <hr style="margin-bottom: 0;">
+                </div>
+                <div class="tab-pane fade" id="customer" role="tabpanel">
+                    <p class="bland customer-name">Tên khách</p>
+                    <p class="bold customer-locate">Địa chỉ khách</p>
+                    <hr>
+                    <p>Thu: <span class="collect">0</span></p>
+                    <hr style="margin-bottom: 0;">
+                </div>
+              </div>
+        </div>
+        <div class="ctn-order w-100">
+            <div class="head-order">
+                <p class="w-100 status">Trạng thái: <span class="order-status">Đã nhận đơn hàng</span></p>
+                <p class="w-100 time">Còn <span class="time-over bold">22 phút</span> để giao</p>
+            </div>
+            <div class="body-order">
+                <div class="box-order-detail">
+                    <p class="bold">Chi tiết đơn hàng</p>
+                    <p>Số lượng: <span class="total-quantity">3</span></p>
+                    <hr>
+                    <p class="bold">Menu</p>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="bold">#Tên món</th>
+                            <th scope="col">SL</th>
+                            <th scope="col" class="bold">Thành tiền</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">01. <span class="dish-name">Bánh mì</span></th>
+                            <td class="quantity">4</td>
+                            <td class="total-amount">12.000 đ</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">01. <span class="dish-name">Bánh mì</span></th>
+                            <td class="quantity">4</td>
+                            <td class="total-amount">12.000 đ</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="box-bill restaurant-bill">
+                    <p class="bold">Hoá đơn quán</p>
+                    <p class="bland">Tổng đơn hàng <span class="price">200.000 đ</span></p>
+                    <p class="bland">Chiếu khấu quán <span class="discount">20.000 đ</span></p>
+                    <p class="bland">Trả quán <span class="payment">180.000 đ</span></p>
+                    <hr>
+                    <p class="payment-method bold" style="color: orange;"><i class="dollar-icon fa-solid fa-dollar-sign"></i><span style=" float: none"> Trả tiền mặt</span></p>
+                </div>
+                <div class="box-bill customer-bill">
+                    <p class="bold">Hoá đơn khách</p>
+                    <p class="bland">Thu tiền <span class="price">215.000 đ</span></p>
+                    <hr>
+                    <p class="payment-method bold" style="color: orange;"><i class="dollar-icon fa-solid fa-dollar-sign"></i><span style=" float: none"> Trả tiền mặt</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>

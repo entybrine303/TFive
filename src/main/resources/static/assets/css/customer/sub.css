@@ -229,6 +229,11 @@ section> .container{
     font-weight: bold;
 }
 
+.btn-username{
+	display: flex;
+    align-items: center;
+}
+
 .box-intro{
     
 }

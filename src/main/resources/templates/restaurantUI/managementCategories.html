@@ -1,74 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorate="~{restaurantForm.html}">
+	layout:decorate="~{restaurantForm.html}"
+	>
 <head>
 <title>QUẢN LÝ DANH MỤC MÓN</title>
 </head>
 
 
 <body>
-    <section layout:fragment="body">
-        <main>
-            <div class="container box-main">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#management-categories" role="tab"
-                            aria-controls="management-categories" aria-selected="true">Quản lý danh mục món</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#list-categories" role="tab"
-                            aria-controls="list-categories" aria-selected="false">Danh sách danh mục món</a></li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-    
-                    <div class="tab-pane fade show active" id="management-categories" role="tabpanel" aria-labelledby="home-tab">
-                        <form action="/admin/products/saveOrUpdate" method="post" class="card container form-management"
-                            enctype="multipart/form-data" >
-                                <div class="box-l">
-    
-                                    <label for="categories-id">ID Danh mục món </label>
-                                    <input type="text" id="categories-id" class="form-control" name="productId"
-                                       >
-                                    <label for="categories-name">Tên danh mục</label>
-                                    <input type="text" id="categories-name" class="form-control" name="name" >
-                                    
-                                </div>
-    
-                            <div class="box-btn">
-    
-                                <button class="btn btn-info">Save</button>
-    
-                                <a><button type="reset" class="btn btn-primary">Reset</button></a>
-    
-                            </div>
-                        </form>
-                    </div>
-    
-                    <div class="tab-pane fade" id="list-categories" role="tabpanel" aria-labelledby="profile-tab">
-                        <table class="table tbl-cart">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">ID Món</th>
-                                    <th scope="col">Tên danh mục</th>
-                                    <th scope="col">Thao tác</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr >
-                                    <td scope="row" >C123</td>
-                                    <td scope="row" >Coffe</td>
-                                    <td><a class="edit">Edit</a>
-                                        | <a>Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-    
-            </div>
-    
-        </main>
+	<section layout:fragment="body">
+		<main>
+			<div class="container box-main">
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item"><a class="nav-link active"
+						data-toggle="tab" href="#management-categories" role="tab"
+						aria-controls="management-categories" aria-selected="true">Quản
+							lý danh mục món</a></li>
 
-    </section>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab"
+						href="#list-categories" role="tab" aria-controls="list-categories"
+						aria-selected="false">Danh sách danh mục món</a></li>
+				</ul>
+
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="management-categories"
+						role="tabpanel" aria-labelledby="home-tab"> 
+						<form th:action="@{/tfive/admin/categories/save}" method="post" 
+							 class="card container form-management" th:object="${category}"> 
+							<div class="box-l">
+
+                          <input type="hidden" th:field="*{isEdit}" name="isEdit" >
+                          <label for="categoriesID">Id:</label>
+                          <input type="text" class="form-control" id="categoriesID" placeholder="categoriesID"
+                          th:readonly="${category.isEdit}" th:field="*{categoriesID}" name="categoriesID" >
+									<label for="name">Tên danh mục</label> 
+									<input type="text" id="name" th:field="*{name}"
+									class="form-control" name="name">
+									</div>
+
+							<div class="box-btn">
+
+								<button class="btn btn-info" th:text="${category.isEdit? 'Update' : 'Save'}">Save</button>
+								<a><button th:if="${category.isEdit==false}" type="reset" class="btn btn-primary" >Reset</button></a>
+								<a th:if="${category.isEdit==true}" type="button" class="btn btn-primary" th:href="@{/tfive/admin/categories/view}">Reset</a>
+								<a style="background-color:#ED1D24" th:if="${category.isEdit==true}" type="button" class="btn btn-primary" th:href="@{'/tfive/admin/categories/delete/' + ${category.categoriesID}}">Delete</a>
+
+							</div>
+						</form>
+					</div>
+
+					<div class="tab-pane fade" id="list-categories" role="tabpanel"
+						aria-labelledby="profile-tab">
+						<table class="table tbl-cart">
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">ID Món</th>
+									<th scope="col">Tên danh mục</th>
+									<th scope="col">Thao tác</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="item : ${categories}">
+									<td scope="row" th:text="${item.categoriesID}"></td>
+									<td scope="row" th:text="${item.name}"></td>
+									<td><a class="edit" th:href="@{'/tfive/admin/categories/edit/' + ${item.categoriesID}}">Edit</a> 
+									| <a th:href="@{'/tfive/admin/categories/delete/' + ${item.categoriesID}}">Delete</a>
+									</td>
+								</tr>
+							</tbody>
+						
+						</table>
+
+
+					</div>
+				</div>
+
+			</div>
+
+		</main>
+
+	</section>
 
 </body>
 

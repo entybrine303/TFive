@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{customerForm.html}">
+<head>
+<title>ĐĂNG NHẬP</title>
+
+</head>
+
+<body>
+    <section layout:fragment="body">
+        <main class="main__content_wrapper">
+            
+            <!-- Start breadcrumb section -->
+            <section class="breadcrumb__section breadcrumb__bg">
+                <div class="container">
+                    <div class="row row-cols-1">
+                        <div class="col">
+                            <div class="breadcrumb__content text-center">
+                                <ul class="breadcrumb__content--menu d-flex justify-content-center">
+                                    <li class="breadcrumb__content--menu__items"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb__content--menu__items"><span>Account</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End breadcrumb section -->
+    
+            <!-- Start login section  -->
+            <div class="login__section section--padding">
+                <div class="container">
+                    <form action="#">
+                        <div class="login__section--inner card-container">
+                            <div class="row row-cols-md-2 row-cols-1 card-account">
+                                <div class="col  card-front">
+                                    <div class="account__login">
+                                        <div class="account__login--header mb-25">
+                                            <h2 class="account__login--header__title mb-10">Đăng nhập</h2>
+                                        </div>
+                                        <div class="account__login--inner">
+                                            <label>
+                                                <input class="account__login--input" placeholder="Username, email hoặc số điện thoại" type="text">
+                                            </label>
+                                            <label>
+                                                <input class="account__login--input" placeholder="Mật khẩu" type="password">
+                                            </label>
+                                            <div class="account__login--remember__forgot mb-15 d-flex justify-content-between align-items-center">
+                                                <div class="account__login--remember position__relative">
+                                                    <input class="checkout__checkbox--input" id="check1" type="checkbox">
+                                                    <span class="checkout__checkbox--checkmark"></span>
+                                                    <label class="checkout__checkbox--label login__remember--label" for="check1">
+                                                        Ghi nhớ đăng nhập</label>
+                                                </div>
+                                                <button class="account__login--forgot"  type="submit">Quên mật khẩu</button>
+                                            </div>
+                                            <button class="account__login--btn primary__btn" type="submit">Đăng nhập</button>
+                                            <div class="account__login--divide">
+                                                <span class="account__login--divide__text">Hoặc</span>
+                                            </div>
+                                            <div class="account__social d-flex justify-content-center mb-15">
+                                                <a class="account__social--link facebook" target="_blank" href="https://www.facebook.com">Facebook</a>
+                                                <a class="account__social--link google" target="_blank" href="https://www.google.com">Google</a>
+                                                <a class="account__social--link twitter" target="_blank" href="https://twitter.com">Twitter</a>
+                                            </div>
+                                            <p class="account__login--signup__text">Không có tài khoản ? <button onclick="flipCard()" type="button">Đăng kí ngay</button></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col card-back">
+                                    <div class="account__login register">
+                                        <div class="account__login--header mb-25">
+                                            <h2 class="account__login--header__title mb-10">Tạo tài khoản</h2>
+                                            <p class="account__login--header__desc">Đăng kí tại đây để trở thành khách hàng mới của chúng tôi</p>
+                                        </div>
+                                        <div class="account__login--inner">
+                                            <label>
+                                                <input class="account__login--input" placeholder="Username" type="text">
+                                            </label>
+                                            <label>
+                                                <input class="account__login--input" placeholder="Email" type="email">
+                                            </label>
+                                            <label>
+                                                <input class="account__login--input" placeholder="Mật khẩu" type="password">
+                                            </label>
+                                            <label>
+                                                <input class="account__login--input" placeholder="Nhập lại mật khẩu" type="password">
+                                            </label>
+                                            <button class="account__login--btn primary__btn mb-10" type="submit">Xác nhận & Đăng kí</button>
+                                            <p class="account__login--signup__text">Đã có tài khoản ? <button onclick="flipCard()" type="button">Đăng nhập ngay</button></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>     
+            </div>
+            <!-- End login section  -->
+    
+        </main>
+        
+    </section>
+	
+</body>
+</html>

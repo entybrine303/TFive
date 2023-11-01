@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{customerForm.html}">
+<head>
+<title>CHI TIẾT ĐƠN HÀNG</title>
+</head>
+
+<body>
+    <section layout:fragment="body">
+        <main class="main__content_wrapper">
+    
+            <!-- Start breadcrumb section -->
+            <section class="breadcrumb__section breadcrumb__bg">
+                <div class="container">
+                    <div class="row row-cols-1">
+                        <div class="col">
+                            <div class="breadcrumb__content text-center">
+                                <ul class="breadcrumb__content--menu d-flex justify-content-center">
+                                    <li class="breadcrumb__content--menu__items"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb__content--menu__items"><span>Order details</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End breadcrumb section -->
+            
+            <!-- my account section start -->
+            <section class="my__account--section section--padding">
+                <div class="container box-order-status">
+                    <p class="account__welcome--text">Bạn ơi, đơn hàng của bạn <span class="order-status" style="text-transform: capitalize;">đã được quán xác nhận</span></p>
+                    <div class="my__account--section__inner border-radius-10">
+                            <div class="row order-status-list">
+                                <div class="col-md-2 col-sm-4 col-xs-12 this-step"><i class="fa-solid fa-cart-arrow-down"></i><p>Đã đặt hàng </p><span class="bland"> 10:00 21/10/2023</span></div>
+                                <div class="col-md-2 col-sm-4 col-xs-12 passed-step"><i class="fa-solid fa-check-to-slot"></i><p>Đã xác nhận</p><span class="bland"> 10:00 21/10/2023</span></div>
+                                <div class="col-md-2 col-sm-4 col-xs-12"><i class="fa-solid fa-store"></i><p>Đã tới điểm lấy </p><span class="bland"> 10:00 21/10/2023</span></div>
+                                <div class="col-md-2 col-sm-4 col-xs-12"><i class="fa-solid fa-box"></i><p>Đã lấy hàng </p><span class="bland"> 10:00 21/10/2023</span></div>
+                                <div class="col-md-2 col-sm-4 col-xs-12"><i class="fa-solid fa-house-circle-check"></i><p>Đã tới điểm giao </p><span class="bland"> 10:00 21/10/2023</span></div>
+                                <div class="col-md-2 col-sm-4 col-xs-12"><i class="fa-solid fa-check"></i><p>Đã giao xong </p><span class="bland"> 10:00 21/10/2023</span></div>
+                            </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="my__account--section__inner border-radius-10">
+                        <div class="row">
+                            <div class="box-driver-detail col-md-4">
+                            <div class="driver-info " id="head-info" style="display: flex;">
+                                <div class="img-driver">
+                                    <img class="driver-avt" src="/assets/img/product/small-product/product1.webp" alt="Driver Img">
+                                </div>
+                                <div class="driver-info-right" style="margin-left: 14px;">
+                                    <strong class="driver-name">Tên tài xế</strong>
+                                    <ul class="rating product__card--rating d-flex">
+                                        <li class="rating__list">
+                                            <span class="rating__icon">
+                                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.08398 0.921875L4.56055 4.03906L1.11523 4.53125C0.505859 4.625 0.271484 5.375 0.716797 5.82031L3.17773 8.23438L2.5918 11.6328C2.49805 12.2422 3.1543 12.7109 3.69336 12.4297L6.76367 10.8125L9.81055 12.4297C10.3496 12.7109 11.0059 12.2422 10.9121 11.6328L10.3262 8.23438L12.7871 5.82031C13.2324 5.375 12.998 4.625 12.3887 4.53125L8.9668 4.03906L7.41992 0.921875C7.16211 0.382812 6.36523 0.359375 6.08398 0.921875Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="rating__list">
+                                            <span class="rating__icon">
+                                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.08398 0.921875L4.56055 4.03906L1.11523 4.53125C0.505859 4.625 0.271484 5.375 0.716797 5.82031L3.17773 8.23438L2.5918 11.6328C2.49805 12.2422 3.1543 12.7109 3.69336 12.4297L6.76367 10.8125L9.81055 12.4297C10.3496 12.7109 11.0059 12.2422 10.9121 11.6328L10.3262 8.23438L12.7871 5.82031C13.2324 5.375 12.998 4.625 12.3887 4.53125L8.9668 4.03906L7.41992 0.921875C7.16211 0.382812 6.36523 0.359375 6.08398 0.921875Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="rating__list">
+                                            <span class="rating__icon">
+                                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.08398 0.921875L4.56055 4.03906L1.11523 4.53125C0.505859 4.625 0.271484 5.375 0.716797 5.82031L3.17773 8.23438L2.5918 11.6328C2.49805 12.2422 3.1543 12.7109 3.69336 12.4297L6.76367 10.8125L9.81055 12.4297C10.3496 12.7109 11.0059 12.2422 10.9121 11.6328L10.3262 8.23438L12.7871 5.82031C13.2324 5.375 12.998 4.625 12.3887 4.53125L8.9668 4.03906L7.41992 0.921875C7.16211 0.382812 6.36523 0.359375 6.08398 0.921875Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="rating__list">
+                                            <span class="rating__icon"> 
+                                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.4141 4.53125L8.99219 4.03906L7.44531 0.921875C7.1875 0.382812 6.39062 0.359375 6.10938 0.921875L4.58594 4.03906L1.14062 4.53125C0.53125 4.625 0.296875 5.375 0.742188 5.82031L3.20312 8.23438L2.61719 11.6328C2.52344 12.2422 3.17969 12.7109 3.71875 12.4297L6.78906 10.8125L9.83594 12.4297C10.375 12.7109 11.0312 12.2422 10.9375 11.6328L10.3516 8.23438L12.8125 5.82031C13.2578 5.375 13.0234 4.625 12.4141 4.53125ZM9.53125 7.95312L10.1875 11.75L6.78906 9.96875L3.36719 11.75L4.02344 7.95312L1.25781 5.28125L5.07812 4.71875L6.78906 1.25L8.47656 4.71875L12.2969 5.28125L9.53125 7.95312Z" fill="currentColor"></path>
+                                                    </svg>
+                                            </span>
+                                        </li>
+                                        <li class="rating__list">
+                                            <span class="rating__icon"> 
+                                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.4141 4.53125L8.99219 4.03906L7.44531 0.921875C7.1875 0.382812 6.39062 0.359375 6.10938 0.921875L4.58594 4.03906L1.14062 4.53125C0.53125 4.625 0.296875 5.375 0.742188 5.82031L3.20312 8.23438L2.61719 11.6328C2.52344 12.2422 3.17969 12.7109 3.71875 12.4297L6.78906 10.8125L9.83594 12.4297C10.375 12.7109 11.0312 12.2422 10.9375 11.6328L10.3516 8.23438L12.8125 5.82031C13.2578 5.375 13.0234 4.625 12.4141 4.53125ZM9.53125 7.95312L10.1875 11.75L6.78906 9.96875L3.36719 11.75L4.02344 7.95312L1.25781 5.28125L5.07812 4.71875L6.78906 1.25L8.47656 4.71875L12.2969 5.28125L9.53125 7.95312Z" fill="currentColor"></path>
+                                                    </svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <button class="btn-contact" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-phone"></i></button>
+                                    <div class="dropdown-menu list-phone-number" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Quán: <span class="retaurant-phone-number">01234567</span></a>
+                                        <a class="dropdown-item" href="#">Tài xế: <span class="driver-phone-number">09876543</span></a>
+                                      </div>
+                                    <button class="btn-contact"><i class="fa-solid fa-comment"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="box-order-info col-md-8">
+                                <div class="order-info">
+                                    <div class="row head-order-info">
+                                            <div class="t-head-order-info col-md-6 col-sm-6 col-xs-6 customer-info">
+                                                <h3>Địa chỉ nhận hàng</h3>
+                                                <p class="customer-name">Tên khách hàng</p>
+                                                <p class="bland phone-number fs-16">Số điện thoại khách</p>
+                                                <p class="bland customer-address fs-16">Địa chỉ khách</p>
+                                            </div>
+                                            <div class="t-head-order-info col-md-6 col-sm-6 col-xs-6 sub-order-status">
+                                                <h4>Trạng thái đơn hàng</h4>
+                                                <p class="bland this-status fs-16">Đã được xác nhận</p>
+                                                <p class="status-time fs-16">00:00 20/10/2023</p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="my__account--section__inner border-radius-10">
+                        <div class="row">
+                            <div class="body-order">
+                                <div class="box-order-detail">
+                                    <p class="bold">Chi tiết đơn hàng</p>
+                                    <p>Số lượng: <span class="total-quantity">3</span></p>
+                                    <hr>
+                                    <p class="bold">Menu</p>
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col" class="bold">#Tên món</th>
+                                            <th scope="col">SL</th>
+                                            <th scope="col" class="bold">Thành tiền</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">01. <span class="dish-name">Bánh mì</span></th>
+                                            <td class="quantity">4</td>
+                                            <td class="total-amount">12.000 đ</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">01. <span class="dish-name">Bánh mì</span></th>
+                                            <td class="quantity">4</td>
+                                            <td class="total-amount">12.000 đ</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                            <div class="order-bill">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="col">Tổng tiền hàng</th>
+                                            <td>24.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Phí ship</th>
+                                            <td>15.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Voucher từ cửa hàng</th>
+                                            <td>-6.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Giảm giá phí ship</th>
+                                            <td>0đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Thành tiền</th>
+                                            <td>20.000đ</td>
+                                          </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- my account section end -->
+    
+    
+        </main>
+    </section>
+</body>
+</html>

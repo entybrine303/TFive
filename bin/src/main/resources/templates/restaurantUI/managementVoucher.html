@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{restaurantForm.html}">
+<head>
+<title>QUẢN LÝ VOUCHER</title>
+</head>
+
+<body>
+    <section layout:fragment="body">
+        <main>
+            <div class="container box-main">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#management-voucher" role="tab"
+                            aria-controls="management-voucher" aria-selected="true">Quản lý voucher</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#list-voucher" role="tab"
+                            aria-controls="list-voucher" aria-selected="false">Danh sách voucher</a></li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="management-voucher" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="/admin/products/saveOrUpdate" method="post" class="card container form-management"
+                            enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="box-l col-sm-7">
+                                    <label for="voucher-id">Mã voucher </label>
+                                    <input type="text" id="voucher-id" class="form-control" name="productId"
+                                        >
+                                    <label for="reducedPrice">Voucher giảm</label>
+                                    <input type="number" id="reducedPrice" class="form-control" name="price" >
+                                    <label for="minimumPrice">Giá tối thiểu</label>
+                                    <input type="number" id="minimumPrice" class="form-control" name="price" >
+                                    <input type="radio" name="isShare" id="public">
+                                    <label for="public">Công khai</label>
+                                    <input type="radio" name="isShare" id="private">
+                                    <label for="private">Không công khai</label> <br>
+                                    <label for="">Loại voucher</label> <br>
+                                    <input type="radio" name="voucherType" id="dish-voucher">
+                                    <label for="dish-voucher">Món</label>
+                                    <input type="radio" name="voucherType" id="delivery-voucher">
+                                    <label for="delivery-voucher">Vận chuyển</label>
+                                    <label for="description" class="w-100">Mô tả của voucher
+                                    </label>
+                                    <textarea class="w-100" id="description" rows="4" name="description"
+                                        ></textarea>
+                                </div>
+    
+                            </div>
+    
+                            <div class="box-btn">
+    
+                                <button class="btn btn-info">Save</button>
+    
+                                <a><button type="reset" class="btn btn-primary">Reset</button></a>
+    
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="tab-pane fade" id="list-voucher" role="tabpanel" aria-labelledby="profile-tab">
+                        <table class="table tbl-cart">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Mã voucher</th>
+                                    <th scope="col">Voucher giảm</th>
+                                    <th scope="col">Giá tối thiểu</th>
+                                    <th scope="col">Chia sẻ</th>
+                                    <th scope="col">Loại voucher</th>
+                                    <th scope="col">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td scope="row">V123</td>
+                                    <td scope="row">20.000đ</td>
+                                    <td>10.000đ</td>
+                                    <td>Công khai</td>
+                                    <td>Vận chuyển</td>
+                                    <td><a class="edit" >Edit</a>
+                                        | <a >Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </main>
+        
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+main{
+    margin-left: 60px;
+}
+
+.box-tabs{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+}
+
+.list-tabs{
+    height: 100vh;
+    background-color: black;
+    box-shadow: 8px 0 20px rgba(0, 0, 0, 0.1); /* Đổ bóng bên phải */
+}
+
+ .list-tabs a{
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 20px;
+    border-radius: 0;
+}
+
+.list-tabs >a:first-child{
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+}
+
+ .list-tabs a:hover{
+    color: red;
+}
+
+
+ .list-tabs> a:not(:first-child):hover{
+    background-color: rgb(216, 213, 213);
+}
+
+
+
+.list-tabs-off{
+    width: 60px;
+    position: fixed;
+    top: 0;
+}
+
+.list-tabs-off a{
+    text-align: center;
+}
+
+.list-tabs-on{
+    display: none;
+    z-index: 100;
+    animation: onTabs ease 0.4s;
+}
+
+.list-tabs-on .icon-angle{
+    float: right;
+    line-height: 24px;
+}
+
+.list-tabs .sub-tabs{
+    padding-left: 26px;
+    background-color: #fff;
+    color: black;
+    border-radius: 0;
+}
+
+main{
+    
+}
+
+
+/* PC */
+@media (min-width: 1024px) {
+    .box-tabs .list-tabs-on{
+        width: 30%;
+    }
+
+}
+
+
+/* TABLET & MOBILE */
+@media (max-width: 1023px){
+    .box-tabs .list-tabs-on{
+        width: 30%;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 739px) {
+    .box-tabs .list-tabs-on{
+        width: 50%;
+    }
+
+    .box-tabs .list-tabs a{
+        font-size: 14px !important;
+    }
+}
+
+@keyframes onTabs {
+    from {
+      opacity: 0;
+      transform: translateX(-30%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

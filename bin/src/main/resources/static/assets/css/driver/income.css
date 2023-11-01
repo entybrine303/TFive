@@ -1,0 +1,50 @@
+
+/* NAV */
+.t-nav-item{
+    width: 33.3%;
+    text-align: center;
+}
+
+/* BODY */
+.t-time-updated{
+    text-align: center;
+    font-size: 16px;
+    background-color: #EEF7FE;
+    padding: 12px 16px;
+}
+
+/* INCOME */
+.box-ctn-income{
+    height: calc(100vh - 128px);
+}
+
+.box-income{
+    background-color: #EEEEEE;
+    padding: 2px 0 0;
+}
+
+.box-income .c-income{
+    background-color: #fff;
+    padding: 20px 10px;
+    margin: 10px 0 6px;
+}
+
+.box-income .c-income p,
+.box-income .c-income li{
+    padding: 6px 0;
+}
+
+.total-income{
+    font-size: 34px;
+    color: red;
+}
+
+.c-income span {
+    float: right;
+}
+
+.c-income .icons-dollar {
+    border-radius: 18px;
+    padding: 6px 10px;
+    color: #fff;
+}

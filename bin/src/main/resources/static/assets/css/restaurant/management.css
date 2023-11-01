@@ -1,0 +1,74 @@
+
+.mt-74{
+    margin-top: 74px;
+}
+
+.box-main{
+    padding: 30px 10px;
+}
+
+
+.box-management{
+    margin: 40px 0;
+}
+
+#management-product,
+#list-product{
+    background-color: white;
+}
+
+.form-management{
+
+}
+
+.form-management label{
+    margin-top: 10px;
+}
+
+.form-management .t-select{
+    width: 200px;
+    font-size: 18px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.box-btn{
+    margin: 20px 0;
+}
+
+.box-r{
+    text-align: center;
+}
+
+.box-r .box-img img{
+    border-radius: 14px;
+    padding: 10px 0;
+}
+
+tbody tr{
+    font-size: 16px;
+}
+
+.nav-search{
+    position: fixed;
+    top: 0;
+    left: 60px;
+    padding: 14px 10px;
+    background-color: #F0F1F3;
+    text-align: center;
+}
+
+.box-search .input-search{
+    padding: 6px;
+    width: 60%;
+}
+
+.box-search .btn-search{
+    border: none;
+    height: 46px;
+    padding: 0 12px;
+    border-radius: 6px;
+    background: #fff;
+}

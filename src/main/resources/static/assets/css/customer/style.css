@@ -2139,12 +2139,12 @@ body.overlay__active::before,
 
 .header__search--box {
   position: relative;
-  width: 330px;
+  width: 448px;
 }
 
 @media only screen and (min-width: 1200px) {
   .header__search--box {
-    width: 400px;
+    width: 500px;
   }
 }
 

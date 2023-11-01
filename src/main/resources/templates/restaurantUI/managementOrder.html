@@ -10,7 +10,6 @@
 <body>
     <section layout:fragment="body">
         <main>
-    
             <div class="body">
                 <div class="box-btn-control">
                     <button class="btn-reload"><i class="ti-reload"></i></button>
@@ -83,6 +82,10 @@
                                                 <div class="box-dish-list">
                                                     <p class="bold">Chi tiết đơn hàng</p>
                                                     <hr>
+                                                    <div class="box-note container">
+                                                    <p class="bold">Ghi chú của khách</p>
+                                                    <p class="note">Ghi chú.....</p>
+                                                </div>
                                                     <p class="bold">Menu</p>
                                                     <table class="table">
                                                         <thead>
@@ -142,8 +145,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="order-list tab-pane fade show active" id="order-new" role="tabpanel"
-                            >
+                        <div class="order-list tab-pane fade show active" id="order-new" role="tabpanel">
                             <div class="box-order-new c-box-order">
                                 <div class="order-head row">
                                     <div class="ctn-l col-6">
@@ -189,6 +191,10 @@
                                                 <div class="box-dish-list">
                                                     <p class="bold">Chi tiết đơn hàng</p>
                                                     <hr>
+                                                    <div class="box-note container">
+                                                    <p class="bold">Ghi chú của khách</p>
+                                                    <p class="note">Ghi chú.....</p>
+                                                </div>
                                                     <p class="bold">Menu</p>
                                                     <table class="table">
                                                         <thead>
@@ -250,6 +256,7 @@
                         </div>
                         <div class="tab-pane fade" id="order-received" role="tabpanel">
                             <div class="box-order-received c-box-order" th:onclick="'redirectToPage(\'' + @{'/tfive/admin/order-detail'} + '\')'">
+
                                 <div class="order-head row">
                                     <div class="ctn-l col-6">
                                         <p class="order-id">Mã đơn hàng</p>

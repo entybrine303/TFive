@@ -6,6 +6,9 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -22,11 +25,7 @@ import lombok.NoArgsConstructor;
 public class Delivery implements Serializable{
 	@Id
 	@Column(length = 10)
-	private String delyveryID;
-	@Column(length = 10)
-	private String orderID;
-	@Column(length = 10)
-	private String driverID;
+	private String deliveryID;
 	private int DeliveryTime;
 	private double RestaurantPayment;
 	private double CustomerFees;
@@ -45,4 +44,13 @@ public class Delivery implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date FinishedOrder;
 	private String noteForDriver;
+
+	@ManyToOne
+	@JoinColumn(name = "driverID", referencedColumnName = "driverID")
+	private Driver driver;	
+	
+	@OneToOne
+    @JoinColumn(name = "orderID", referencedColumnName = "orderID")
+//	Khi join bảng, cần đặt tên trường trùng với tên bảng cần join *****
+    private Order orders;
 }

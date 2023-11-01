@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{customerForm.html}">
+<head>
+<title>TÀI KHOẢN</title>
+</head>
+
+<body>
+    <section layout:fragment="body">
+        <main class="main__content_wrapper">
+    
+            <!-- Start breadcrumb section -->
+            <section class="breadcrumb__section breadcrumb__bg">
+                <div class="container">
+                    <div class="row row-cols-1">
+                        <div class="col">
+                            <div class="breadcrumb__content text-center">
+                                <ul class="breadcrumb__content--menu d-flex justify-content-center">
+                                    <li class="breadcrumb__content--menu__items"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb__content--menu__items"><span>My Account</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End breadcrumb section -->
+            
+            <!-- my account section start -->
+            <section class="my__account--section section--padding">
+                <div class="container">
+                    <p class="account__welcome--text">Hello, chào <span class="customer-name" style="text-transform: capitalize;">Tên khách hàng</span></p>
+                    <div class="my__account--section__inner border-radius-10 d-flex">
+                        <div class="account__left--sidebar">
+                            <h2 class="account__content--title mb-20">Tài khoản của tôi</h2>
+                            <ul class="account__menu">
+                                <li class="account__menu--list active"><a href="my-account.html">Đơn hàng</a></li>
+                                <li class="account__menu--list"><a href="my-account-2.html">Thông tin cá nhân</a></li>
+                            <li class="account__menu--list"><a href="wishlist.html">Yêu thích</a></li>
+                            <li class="account__menu--list"><a href="wishlist.html">Đổi mật khẩu</a></li>
+                                <li class="account__menu--list"><a href="login.html">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                        <div class="account__wrapper">
+                            <div class="account__content">
+                                <h2 class="account__content--title h3 mb-20">Lịch sử đơn hàng</h2>
+                                <div class="account__table--area">
+                                    <table class="account__table">
+                                        <thead class="account__table--header">
+                                            <tr class="account__table--header__child">
+                                                <th class="account__table--header__child--items">Mã đơn</th>
+                                                <th class="account__table--header__child--items">Ngày đặt</th>
+                                                <th class="account__table--header__child--items">Tình trạng</th>
+                                                <th class="account__table--header__child--items">Tổng tiền</th>	 	 	 	
+                                                <th class="account__table--header__child--items"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="account__table--body mobile__none">
+                                            <tr class="account__table--body__child">
+                                                <td class="account__table--body__child--items order-ID">#1</td>
+                                                <td class="account__table--body__child--items order-date">November 24, 2022</td>
+                                                <td class="account__table--body__child--items order-status">Đã hoàn thành</td>
+                                                <td class="account__table--body__child--items order-total-price">$40.00 USD</td>
+                                                <td class="account__table--body__child--items"><button class="btn-detail">Chi tiết</button></td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                        <tbody class="account__table--body mobile__block">
+                                            <tr class="account__table--body__child">
+                                                <td class="account__table--body__child--items">
+                                                    <strong>Mã đơn hàng</strong>
+                                                    <span>#1</span>
+                                                </td>
+                                                <td class="account__table--body__child--items">
+                                                    <strong>Ngày đặt</strong>
+                                                    <span>November 24, 2022</span>
+                                                </td>
+                                                <td class="account__table--body__child--items">
+                                                    <strong>Tình trạng</strong>
+                                                    <span>Paid</span>
+                                                </td>
+                                                <td class="account__table--body__child--items">
+                                                    <strong>Tổng tiền</strong>
+                                                    <span>$40.00 USD</span>
+                                                </td>
+                                                <td class="account__table--body__child--items">
+                                                    <button class="btn-detail btn-detail-mobile">Chi tiết</button>
+                                                </td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- my account section end -->
+    
+    
+        </main>
+    </section>
+
+</body>
+</html>

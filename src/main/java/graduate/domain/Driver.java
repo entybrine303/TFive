@@ -1,10 +1,14 @@
 package graduate.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -20,8 +24,6 @@ public class Driver implements Serializable{
 	@Id
 	@Column(length = 10)
 	private String driverID;
-	@Column(length = 20)
-	private String username;
 	@Column(length = 10)
 	private String licensePlates;
 	@Column(length = 50)
@@ -34,5 +36,12 @@ public class Driver implements Serializable{
 	@Column(length = 12)
 	private String identificationCard;
 	private String img;
+
+	@OneToMany(mappedBy = "driver")
+    private List<Delivery> deliveries;
+	
+	@OneToOne
+    @JoinColumn(name = "username", referencedColumnName = "username")
+    private Account account;
 	
 }

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{restaurantForm.html}">
+<head>
+<title>QUẢN LÝ ĐƠN HÀNG</title>
+</head>
+<body>
+    <section layout:fragment="body">
+        <main>
+    
+            <div class="body">
+                <div class="box-btn-control">
+                    <button class="btn-reload"><i class="ti-reload"></i></button>
+                    <button class="btn-filter"><i class="ti-filter"></i></button>
+                </div>
+    
+                <div class="tabs">
+                    <ul class="t-nav nav nav-tabs w-100" id="myTab" role="tablist">
+                        <li class="t-nav-item nav-item w-25">
+                            <a class="nav-link " data-toggle="tab" href="#order-reserve" role="tab"
+                                aria-controls="order-reserve" aria-selected="true">Đặt trước</a>
+                        </li>
+                        <li class="t-nav-item nav-item w-25">
+                            <a class="nav-link active" data-toggle="tab" href="#order-new" role="tab"
+                                aria-controls="order-new" aria-selected="false">Đơn mới</a>
+                        </li>
+                        <li class="t-nav-item nav-item w-25">
+                            <a class="nav-link" data-toggle="tab" href="#order-received" role="tab"
+                                aria-controls="order-received" aria-selected="false">Đã nhận</a>
+                        </li>
+                        <li class="t-nav-item nav-item w-25">
+                            <a class="nav-link" data-toggle="tab" href="#order-history" role="tab"
+                                aria-controls="order-history" aria-selected="false">Lịch sử</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content box-ctn-order" id="myTabContent">
+                        <div class="order-list tab-pane fade show" id="order-reserve" role="tabpanel">
+                            <div class="box-order-reserve c-box-order">
+                                <div class="order-head row">
+                                    <div class="ctn-l col-6">
+                                        <p class="order-id">Mã đơn hàng</p>
+                                    </div>
+                                </div>
+                                <div class="order-body">
+                                    <div class="ctn-b">
+                                        <p>Số lượng món: <span class="total-quantity"></span></p>
+                                        <i class="fa-solid fa-circle dot-icon" style="color: green;"></i><label
+                                            class="deliver bland">Tổng tiền: <span
+                                                class="customer-name">20.000đ</span></label>
+                                         <div class="clear"></div>
+                                        <button class="btn-detail btn-info" type="button" data-toggle="collapse"
+                                            data-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">Xem chi tiết <i
+                                                class="fa-solid fa-angle-down"></i></button>
+                                    </div>
+                                    <div class="collapse" id="collapseExample">
+                                        <hr>
+                                        <div class="box-order-detail">
+                                            <div class="head-order-detail">
+                                                <div class="row">
+                                                    <div class="customer-info col-8">
+                                                        <p class="bold customer-name">Tên khách</p>
+                                                        <p class="bland customer-locate">Địa chỉ khách</p>
+                                                    </div>
+                                                    <div class="box-btn-contact col-4">
+                                                        <button class="btn-contact"><i
+                                                                class="fa-solid fa-phone"></i></button>
+                                                        <button class="btn-contact"><i
+                                                                class="fa-solid fa-comment"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="body-order-detail">
+                                                <hr>
+                                                <div class="box-time">
+                                                    <p>Lấy đơn trong <span class="delivevy-time bold" style="color: green;">29 phút</span></p>
+                                                    <p>Thời gian còn lại: <span class="time-left bold" style="color: red;">29 phút</span></p>
+                                                </div>
+                                                <hr>
+                                                <div class="box-dish-list">
+                                                    <p class="bold">Chi tiết đơn hàng</p>
+                                                    <hr>
+                                                    <p class="bold">Menu</p>
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="bold">#Tên món</th>
+                                                                <th scope="col">SL</th>
+                                                                <th scope="col" class="bold">Thành tiền</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">01. <span class="dish-name">Bánh mì</span>
+                                                                </th>
+                                                                <td class="quantity">4</td>
+                                                                <td class="total-amount">12.000 đ</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">01. <span class="dish-name">Bánh mì</span>
+                                                                </th>
+                                                                <td class="quantity">4</td>
+                                                                <td class="total-amount">12.000 đ</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="order-bill">
+                                                        <table class="w-50">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Tổng tiền hàng</th>
+                                                                    <td>24.000đ</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Voucher từ cửa hàng</th>
+                                                                    <td>-6.000đ</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Thành tiền</th>
+                                                                    <td>20.000đ</td>
+                                                                  </tr>
+                                                            </tbody>
+                                                          </table>
+                                                    </div>
+                                                </div>
+                                                <div class="box-btn-order">
+                                                    <button class="btn-order btn-danger">Từ chối</button>
+                                                    <button class="btn-order btn-success">Xác nhận</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="order-bottom">
+                                    <small class="receive bland">Đã đặt hàng lúc <span class="receiving-time">00:00
+                                            10/10/2020</span></small>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-list tab-pane fade show active" id="order-new" role="tabpanel"
+                            aria-labelledby="home-tab">
+                            <div class="box-order-received c-box-order">
+                                <div class="order-head row">
+                                    <div class="ctn-l col-6">
+                                        <p class="order-id">Mã đơn hàng</p>
+                                    </div>
+                                </div>
+                                <div class="order-body">
+                                    <div class="ctn-b">
+                                        <p>Số lượng món: <span class="total-quantity"></span></p>
+                                        <i class="fa-solid fa-circle dot-icon" style="color: green;"></i><label
+                                            class="deliver bland">Tổng tiền: <span
+                                                class="customer-name">20.000đ</span></label>
+                                         <div class="clear"></div>
+                                        <button class="btn-detail btn-info" type="button" data-toggle="collapse"
+                                            data-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">Xem chi tiết <i
+                                                class="fa-solid fa-angle-down"></i></button>
+                                    </div>
+                                    <div class="collapse" id="collapseExample">
+                                        <hr>
+                                        <div class="box-order-detail">
+                                            <div class="head-order-detail">
+                                                <div class="row">
+                                                    <div class="customer-info col-8">
+                                                        <p class="bold customer-name">Tên khách</p>
+                                                        <p class="bland customer-locate">Địa chỉ khách</p>
+                                                    </div>
+                                                    <div class="box-btn-contact col-4">
+                                                        <button class="btn-contact"><i
+                                                                class="fa-solid fa-phone"></i></button>
+                                                        <button class="btn-contact"><i
+                                                                class="fa-solid fa-comment"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="body-order-detail">
+                                                <hr>
+                                                <div class="box-time">
+                                                    <p>Lấy đơn trong <span class="delivevy-time bold" style="color: green;">29 phút</span></p>
+                                                    <p>Thời gian còn lại: <span class="time-left bold" style="color: red;">29 phút</span></p>
+                                                </div>
+                                                <hr>
+                                                <div class="box-dish-list">
+                                                    <p class="bold">Chi tiết đơn hàng</p>
+                                                    <hr>
+                                                    <p class="bold">Menu</p>
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="bold">#Tên món</th>
+                                                                <th scope="col">SL</th>
+                                                                <th scope="col" class="bold">Thành tiền</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">01. <span class="dish-name">Bánh mì</span>
+                                                                </th>
+                                                                <td class="quantity">4</td>
+                                                                <td class="total-amount">12.000 đ</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">01. <span class="dish-name">Bánh mì</span>
+                                                                </th>
+                                                                <td class="quantity">4</td>
+                                                                <td class="total-amount">12.000 đ</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="order-bill">
+                                                        <table class="w-50">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Tổng tiền hàng</th>
+                                                                    <td>24.000đ</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Voucher từ cửa hàng</th>
+                                                                    <td>-6.000đ</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Thành tiền</th>
+                                                                    <td>20.000đ</td>
+                                                                  </tr>
+                                                            </tbody>
+                                                          </table>
+                                                    </div>
+                                                </div>
+                                                <div class="box-btn-order">
+                                                    <button class="btn-order btn-danger">Từ chối</button>
+                                                    <button class="btn-order btn-success">Xác nhận</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="order-bottom">
+                                    <small class="receive bland">Đã đặt hàng lúc <span class="receiving-time">00:00
+                                            10/10/2020</span></small>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="order-received" role="tabpanel">
+                            <div class="box-order-received c-box-order">
+                                <div class="order-head row">
+                                    <div class="ctn-l col-6">
+                                        <p class="order-id">Mã đơn hàng</p>
+                                    </div>
+                                </div>
+                                <div class="order-body">
+                                    <div class="ctn-b">
+                                        <div class="row">
+                                            <div class="col-6 box-status">
+                                                <p>Trạng thái: <span class="order-status">Tài xế đang đến</span></p>
+                                                <button class="btn-alarm btn-danger"><i class="fa-regular fa-bell"></i> Báo tài xế</button>
+                                            </div>
+                                            <div class="col-6 box-some-order-info">
+                                                <p><i class="fa-solid fa-utensils"></i> <span class="total-quantity">10 món</span></p>
+                                                <p><i class="fa-solid fa-file-invoice-dollar"></i> <span class="total-quantity">50.000đ</span></p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                </div>
+                                <hr>
+                                <div class="order-bottom">
+                                    <small class="receive bland">Đã nhận lúc <span class="receiving-time">00:00
+                                            10/10/2020</span></small>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="order-history" role="tabpanel">
+                            <div class="box-order-history c-box-order">
+                                <div class="order-head row">
+                                    <div class="ctn-l col-6">
+                                        <p class="order-id">Mã đơn hàng</p>
+                                    </div>
+                                </div>
+                                <div class="order-body">
+                                    <div class="ctn-b">
+                                            <div class="row box-some-order-info" style="margin: 0 20px">
+                                                <p class="col-6" style="text-align: left;"><i class="fa-solid fa-utensils"></i> <span class="total-quantity">10 món</span></p>
+                                                <p class="col-6" style="text-align: right;"><i class="fa-solid fa-file-invoice-dollar"></i> <span class="total-quantity">50.000đ</span></p>
+                                            </div>
+                                        </div>
+                                </div>
+                                <hr>
+                                <div class="order-bottom">
+                                    <small class="receive bland">Đã hoàn thành lúc <span class="receiving-time">00:00
+                                            10/10/2020</span></small>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+    </section>
+
+</body>
+
+</html>

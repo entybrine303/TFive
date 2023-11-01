@@ -1,0 +1,15 @@
+.head-profile{
+    text-align: center;
+    background-image: url("/img/background-head-profile.png");
+    background-position: center;
+    background-size: contain;
+    padding: 24px 0;
+}
+
+
+.head-profile .driver-avt{
+    border: 2px black solid;
+    border-radius: 60%;
+    position: relative;
+    height: 150px;
+}

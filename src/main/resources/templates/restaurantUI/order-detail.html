@@ -33,30 +33,27 @@
         </div>
         <div class="box-tabs" id="box-tabs" onclick="hideTabs(event)">
             <div class="list-group list-tabs list-tabs-on" id="list-tabs-on">
-                <a href="#" class="list-group-item list-group-item-action" style="border-radius: 0;">
-
-                    <div class="main__logo--container" style=" display: flex;
+                <a th:href="@{/tfive/}" class="list-group-item list-group-item-action" style="border-radius: 0;">
+                    
+                            <div class="main__logo--container" style=" display: flex;
                             align-items: center;">
-                        <img class="main__logo--img" style="height: 60px;"
-                            src="/assets/img/logo/logo-none-background.png" alt="logo-img">
-                        <span class="main__logo--text bold" style="font-size: 26px;">TFive</span>
-                    </div>
+                                <img class="main__logo--img" style="height: 60px;" src="/assets/img/logo/logo-none-background.png" alt="logo-img">
+                                <span class="main__logo--text bold" style="font-size: 26px;">TFive</span>
+                            </div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">Hồ sơ quán</a>
-                <a class="list-group-item list-group-item-action" data-toggle="collapse" href="#subTabDish"
-                    role="button" aria-expanded="false" aria-controls="collapseExample">Quản lý thực đơn
+                <a class="list-group-item list-group-item-action" data-toggle="collapse" href="#subTabDish" role="button" aria-expanded="false" aria-controls="collapseExample">Quản lý thực đơn
                     <i class="fa-solid fa-angle-down icon-angle"></i>
                 </a>
                 <div class="collapse" id="subTabDish">
-                    <a href="#" class="list-group-item list-group-item-action sub-tabs">Quản lý danh mục món</a>
-                    <a href="#" class="list-group-item list-group-item-action sub-tabs">Quản lý món</a>
-                    <a href="#" class="list-group-item list-group-item-action sub-tabs">Quản lý voucher</a>
-                </div>
-                <a href="#" class="list-group-item list-group-item-action">Quản lý đơn hàng</a>
-                <a href="#" class="list-group-item list-group-item-action">Quản lý khách hàng</a>
-                <a href="#" class="list-group-item list-group-item-action">Quản lý tài xế</a>
+                    <a th:href="@{/tfive/admin/categories/view}" class="list-group-item list-group-item-action sub-tabs">Quản lý danh mục món</a>
+                    <a th:href="@{/tfive/admin/dish/view}" class="list-group-item list-group-item-action sub-tabs">Quản lý món</a>
+                    <a th:href="@{/tfive/admin/voucher/view}" class="list-group-item list-group-item-action sub-tabs">Quản lý voucher</a>
+            </div>
+                <a th:href="@{/tfive/admin/order/view}" class="list-group-item list-group-item-action">Quản lý đơn hàng</a>
+                <a th:href="@{/tfive/admin/customer/view}" class="list-group-item list-group-item-action">Quản lý khách hàng</a>
+                <a th:href="@{/tfive/admin/driver/view}" class="list-group-item list-group-item-action">Quản lý tài xế</a>
                 <a href="#" class="list-group-item list-group-item-action">Thống kê</a>
-                <a href="#" class="list-group-item list-group-item-action">Đăng xuất</a>
+                <a th:href="@{#}" class="list-group-item list-group-item-action">Đăng xuất</a>
             </div>
         </div>
     </aside>
@@ -112,6 +109,10 @@
                     <div class="box-dish-list">
                         <p class="bold">Chi tiết đơn hàng</p>
                         <hr>
+                        <div class="box-note container">
+                                                    <p class="bold">Ghi chú của khách</p>
+                                                    <p class="note">Ghi chú.....</p>
+                                                </div>
                         <p class="bold">Menu</p>
                         <table class="table">
                             <thead>

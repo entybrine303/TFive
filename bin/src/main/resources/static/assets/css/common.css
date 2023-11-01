@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0;
+}
+
+hr{
+    margin: 8px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+ul{
+    margin: 0;
+}
+
+.hover-none:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.body{
+    width: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+.float-r{
+    float: right;
+}
+
+.bland{
+    opacity: 0.6;
+}
+
+.bold{
+    font-weight: bold;
+}

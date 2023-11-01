@@ -413,80 +413,14 @@
                                                 </div>
                                             </a>
                                         </li>
-                                        <li class="categories__shop--card">
+                                        <li class="categories__shop--card" th:each="item : ${categories}">
                                             <a class="categories__shop--card__link" href="product-details.html">
                                                 <div class="categories__thumbnail mb-15">
                                                     <img class="categories__thumbnail--img" src="/assets/img/product/main-product/product1.webp" alt="categories-img">
                                                 </div>
                                                 <div class="categories__content">
-                                                    <h2 class="categories__content--title">Coffe</h2>
+                                                    <h2 class="categories__content--title" th:text="${item.name}">Coffe</h2>
                                                     <span class="categories__content--subtitle">(20 Items)</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="categories__shop--card">
-                                            <a class="categories__shop--card__link" href="product-details.html">
-                                                <div class="categories__thumbnail mb-15">
-                                                    <img class="categories__thumbnail--img" src="/assets/img/product/main-product/product2.webp" alt="categories-img">
-                                                </div>
-                                                <div class="categories__content">
-                                                    <h2 class="categories__content--title">Trà</h2>
-                                                    <span class="categories__content--subtitle">(18 Items)</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="categories__shop--card">
-                                            <a class="categories__shop--card__link" href="product-details.html">
-                                                <div class="categories__thumbnail mb-15">
-                                                    <img class="categories__thumbnail--img" src="/assets/img/product/main-product/product3.webp" alt="categories-img">
-                                                </div>
-                                                <div class="categories__content">
-                                                    <h2 class="categories__content--title">Kem</h2>
-                                                    <span class="categories__content--subtitle">(22 Items)</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="categories__shop--card">
-                                            <a class="categories__shop--card__link" href="product-details.html">
-                                                <div class="categories__thumbnail mb-15">
-                                                    <img class="categories__thumbnail--img" src="/assets/img/product/main-product/product4.webp" alt="categories-img">
-                                                </div>
-                                                <div class="categories__content">
-                                                    <h2 class="categories__content--title">Sữa chua</h2>
-                                                    <span class="categories__content--subtitle">(16 Items)</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="categories__shop--card">
-                                            <a class="categories__shop--card__link" href="product-details.html">
-                                                <div class="categories__thumbnail mb-15">
-                                                    <img class="categories__thumbnail--img" src="/assets/img/product/main-product/product5.webp" alt="categories-img">
-                                                </div>
-                                                <div class="categories__content">
-                                                    <h2 class="categories__content--title">Nước ép</h2>
-                                                    <span class="categories__content--subtitle">(25 Items)</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="categories__shop--card">
-                                            <a class="categories__shop--card__link" href="product-details.html">
-                                                <div class="categories__thumbnail mb-15">
-                                                    <img class="categories__thumbnail--img" src="/assets/img/product/main-product/product11.webp" alt="categories-img">
-                                                </div>
-                                                <div class="categories__content">
-                                                    <h2 class="categories__content--title">Đặc biệt</h2>
-                                                    <span class="categories__content--subtitle">(22 Items)</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="categories__shop--card">
-                                            <a class="categories__shop--card__link" href="product-details.html">
-                                                <div class="categories__thumbnail mb-15">
-                                                    <img class="categories__thumbnail--img" src="/assets/img/product/main-product/product12.webp" alt="categories-img">
-                                                </div>
-                                                <div class="categories__content">
-                                                    <h2 class="categories__content--title">Ăn vặt</h2>
-                                                    <span class="categories__content--subtitle">(26 Items)</span>
                                                 </div>
                                             </a>
                                         </li>

@@ -1,0 +1,39 @@
+.box-detail .box-order-detail{
+    padding: 20px;
+}
+
+.box-order-id{
+    text-align: center;
+}
+
+.box-driver-info,
+.box-customer-info{
+    align-items: center;
+    padding: 10px;
+}
+
+.box-driver-info img,
+.box-customer-info img{
+    border-radius: 60%;
+}
+
+.head-info {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+.box-info {
+    margin-left: 10px; /* Tạo khoảng cách bên trái giữa img và box-info */
+}
+
+.box-btn-alarm{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.box-btn-alarm .btn-alarm{
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    padding: 14px 0;
+}

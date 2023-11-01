@@ -177,7 +177,6 @@ header{
     left: 0;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
-    
 }
 
 .box-func-list{
@@ -219,7 +218,6 @@ header{
     text-transform: capitalize;
     margin: 10px 0;
 }
-
 
 
 @keyframes onTabs {

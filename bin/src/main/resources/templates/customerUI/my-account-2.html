@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{customerForm.html}">
+<head>
+<title>HỒ SƠ CÁ NHÂN</title>
+</head>
+
+<body>
+    <section layout:fragment="body">
+        <main class="main__content_wrapper">
+    
+            <!-- Start breadcrumb section -->
+            <section class="breadcrumb__section breadcrumb__bg">
+                <div class="container">
+                    <div class="row row-cols-1">
+                        <div class="col">
+                            <div class="breadcrumb__content text-center">
+                                <ul class="breadcrumb__content--menu d-flex justify-content-center">
+                                    <li class="breadcrumb__content--menu__items"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb__content--menu__items"><span>My Account</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End breadcrumb section -->
+            
+            <!-- my account section start -->
+            <section class="my__account--section section--padding">
+                <div class="container">
+                    <div class="my__account--section__inner border-radius-10 d-flex">
+                        <div class="account__left--sidebar">
+                            <h2 class="account__content--title mb-20">Tài khoản của tôi</h2>
+                            <ul class="account__menu">
+                                <li class="account__menu--list "><a href="my-account.html">Đơn hàng</a></li>
+                                <li class="account__menu--list active"><a href="my-account-2.html">Thông tin cá nhân</a></li>
+                            <li class="account__menu--list"><a href="wishlist.html">Yêu thích</a></li>
+                            <li class="account__menu--list"><a href="wishlist.html">Đổi mật khẩu</a></li>
+                                <li class="account__menu--list"><a href="login.html">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                        <div class="account__wrapper">
+                            <div class="account__content profile-c" style="display: none;">
+                                <h2>Quản lý hồ sơ cá nhân</h2>
+                                <hr>
+                                <form action="">
+                                <div class="box-customer-info row">
+                                        <div class="box-edit-info col-7">
+                                            <table>
+                                                <tr>
+                                                    <td class="td-left"><p class="bland">Tên đăng nhập: </p></td>
+                                                    <td class="td-right">Thanhducam</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="name">Họ và tên: </label></td>
+                                                    <td class="td-right"><input class="form-control" type="text" id="name"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="email">Email: </label></td>
+                                                    <td class="td-right"><input class="form-control" type="email" id="email"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="phone-number">Số điện thoại: </label></td>
+                                                    <td class="td-right"><input class="form-control" type="tel" id="phone-number"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="">Giới tính</label></td>
+                                                    <td class="td-right">
+                                                        <label for="male"><input type="radio" id="male" name="sex"> Nam</label>
+                                                        <label for="female"><input type="radio" id="female" name="sex"> Nữ</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="address">Địa chỉ: </label></td>
+                                                    <td class="td-right"><input class="form-control" type="text" id="address"></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="box-edit-img col-5">
+                                            <a href="#">
+                                                <img src="/assets/img/product/main-product/product1.webp" alt="Avt">
+                                            </a>
+                                            <button class="btn-select-img" type="button">Chọn ảnh</button>
+                                        </div>
+                                        <div class="account__details--footer d-flex">
+                                            <button class="account__details--footer__btn" type="button">Edit</button>
+                                            <button class="account__details--footer__btn" type="button">Delete</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="account__content profile-restarant">
+                                <h2>Quản lý hồ sơ quán</h2>
+                                <hr>
+                                <form action="">
+                                <div class="box-customer-info row">
+                                        <div class="box-edit-info col-7">
+                                            <table>
+                                                <tr>
+                                                    <td class="td-left"><p class="bland">Tên đăng nhập: </p></td>
+                                                    <td class="td-right">Thanhducam</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="email">Email: </label></td>
+                                                    <td class="td-right"><input class="form-control" type="email" id="email"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="phone-number">Số điện thoại: </label></td>
+                                                    <td class="td-right"><input class="form-control" type="tel" id="phone-number"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="">Trạng thái</label></td>
+                                                    <td class="td-right">
+                                                        <label for="on"><input type="radio" id="on" name="work-status"> Mở cửa</label>
+                                                        <label for="off"><input type="radio" id="off" name="work-status"> Đóng cửa</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td-left"><label class="bland" for="address">Địa chỉ: </label></td>
+                                                    <td class="td-right"><textarea name="" id="address" cols="30" rows="2"></textarea></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="box-edit-img col-5">
+                                            <a href="#">
+                                                <img src="/assets/img/product/main-product/product1.webp" alt="Avt">
+                                            </a>
+                                            <button class="btn-select-img" type="button">Chọn ảnh</button>
+                                        </div>
+                                        <div class="account__details--footer d-flex">
+                                            <button class="account__details--footer__btn" type="button">Edit</button>
+                                            <button class="account__details--footer__btn" type="button">Delete</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- my account section end -->
+    
+        </main>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+main{
+    margin-left: 60px;
+
+}
+
+/* BODY */
+
+.body{
+}
+
+/* BUTTON CONTROL */
+.btn-reload{
+    position: fixed;
+    top: 30%;
+    right: 20px;
+    z-index: 10;
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.btn-filter{
+    font-size: 18px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 6px 10px;
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    z-index: 10;
+}
+
+/* NAV */
+.nav-link.active{
+    color: orange !important;
+}
+
+/* ORDER */
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.order-list{
+}
+
+.tabs .t-nav-item{
+    text-align: center;
+}
+
+.box-order{
+    padding: 0 24px;
+    border-top: 1px gray solid;
+}
+
+.box-order .order-head {
+    text-align: center;
+}
+
+.box-order .order-head .shipping-money{
+    font-size: 18px;
+    color: red;
+}
+
+.box-order .order-bottom{
+    text-align: center;
+    padding-bottom: 14px;
+}
+
+
+.c-box-order{
+    padding: 0 14px;
+}
+
+.c-box-order .order-head{
+ background-color: #FEF8E2;
+ padding: 10px 0;
+}
+
+.order-head .ctn-l{
+    text-align: left;
+}
+
+.order-head .ctn-l p{
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.order-head .ctn-l small{
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.order-head .ctn-r{
+    text-align: right;
+}
+
+.order-body{
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.order-body .dot-icon{
+    font-size: 14px;
+    padding-right: 4px;
+}
+
+.order-body .length{
+    border: 1px gray solid;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-top: 6px;
+}
+
+.order-body .ctn-b{
+    position: relative;
+
+}
+
+.order-bottom{
+
+}
+
+.order-bottom .box-note{
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #FEF8E2;
+}
+
+.btn-detail{
+    position: absolute;
+    right: 10px;
+    top: 12%;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    padding: 6px 8px;
+}
+
+.box-btn-contact{
+    text-align: center;
+}
+
+.btn-contact{
+    background: none;
+    padding: 8px 12px;
+    margin: 0 10px;
+    border: none;
+    color: red;
+    font-size: 24px;
+}
+
+.btn-contact:hover{
+    opacity: 0.6;
+}
+
+.box-time{
+    padding: 10px 0;
+    text-align: center;
+}
+
+.order-bill{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.order-bill table th{
+    padding: 10px 0;
+}
+
+.box-btn-order{
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn-order{
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    margin: 0 6px;
+}
+
+.box-some-order-info{
+    border-left: 1px gainsboro solid;
+    text-align: right;
+}
+
+.box-some-order-info >p{
+    padding: 6px 0;
+}
+
+.box-some-order-info i{
+    font-size: 20px;
+    color: red;
+}
+
+.box-status .btn-alarm{
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    padding: 6px 8px;
+    margin-top: 10px;
+}

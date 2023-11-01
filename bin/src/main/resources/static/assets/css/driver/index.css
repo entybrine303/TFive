@@ -1,0 +1,219 @@
+
+/* HEADER */
+header{
+}
+
+.head-info{
+    padding: 10px;
+    width: 50%;
+}
+
+.head-info .driver-avt{
+    border: 2px black solid;
+    border-radius: 60%;
+    position: relative;
+}
+
+.head-info .driver-name{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.head-info .work-status{
+    font-size: 12px;
+    opacity: 0.8;
+    position: absolute;
+    top: 52px;
+    left: 87px;
+}
+
+/* BODY */
+
+.body{
+    
+}
+
+/* BUTTON CONTROL */
+.btn-reload{
+    position: fixed;
+    top: 30%;
+    right: 20px;
+    z-index: 10;
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.btn-filter{
+    font-size: 18px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 6px 10px;
+    position: fixed;
+    top: 38%;
+    right: 20px;
+    z-index: 10;
+}
+
+/* NAV */
+.nav-link.active{
+    color: orange !important;
+}
+
+/* ORDER */
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.order-list{
+}
+
+.tabs .t-nav-item{
+    text-align: center;
+}
+
+
+
+.box-order{
+    padding: 0 24px;
+    border-top: 1px gray solid;
+}
+
+.box-order .order-head {
+    text-align: center;
+}
+
+.box-order .order-head .shipping-money{
+    font-size: 18px;
+    color: red;
+}
+
+.box-order .order-bottom{
+    text-align: center;
+    padding-bottom: 14px;
+}
+
+
+.box-order-received{
+    padding: 0 14px;
+}
+
+.box-order-received .order-head{
+ background-color: #FEF8E2;
+ padding: 10px 0;
+}
+
+.order-head .ctn-l{
+    text-align: left;
+}
+
+.order-head .ctn-l p{
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.order-head .ctn-l small{
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.order-head .ctn-r{
+    text-align: right;
+}
+
+
+.order-head .ctn-r .delivery-icon{
+    background-color: orange;
+    border-radius: 4px;
+    color: white;
+    width: 104px;
+    float: right;
+    padding: 4px;
+}
+
+.order-body{
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.order-body .dot-icon{
+    font-size: 14px;
+    padding-right: 4px;
+}
+
+.order-body .length{
+    border: 1px gray solid;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-top: 6px;
+}
+
+.order-bottom{
+
+}
+
+.order-bottom .box-note{
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #FEF8E2;
+}
+
+
+/* FUNCTION LIST */
+
+.func-list{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box-func-list{
+    width: 60%;
+    position: relative;
+}
+
+.btn-close-func-list{
+    padding: 6px 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+
+.box-func-list ul{
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.list-info{
+    padding: 40px 10px 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.list-info .driver-avt{
+    border: 2px black solid;
+    border-radius: 60%;
+    position: relative;
+}
+
+.list-info .driver-name{
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 10px 0;
+}

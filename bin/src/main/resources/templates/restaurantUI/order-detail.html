@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHI TIẾT ĐƠN</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="/assets/icons/themify-icons/themify-icons.css">
+    <script src="https://kit.fontawesome.com/cac033d21b.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/restaurant/form.css">
+    <link rel="stylesheet" href="/assets/css/restaurant/order.css">
+    <link rel="stylesheet" href="/assets/css/restaurant/orderDetail.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/restaurantUI/management.js"></script>
+</head>
+
+
+<body>
+    <aside>
+        <div class="list-group list-tabs list-tabs-off" id="list-tabs-off">
+            <a href="#" onclick="displayTabs()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+        <div class="box-tabs" id="box-tabs" onclick="hideTabs(event)">
+            <div class="list-group list-tabs list-tabs-on" id="list-tabs-on">
+                <a href="#" class="list-group-item list-group-item-action" style="border-radius: 0;">
+
+                    <div class="main__logo--container" style=" display: flex;
+                            align-items: center;">
+                        <img class="main__logo--img" style="height: 60px;"
+                            src="/assets/img/logo/logo-none-background.png" alt="logo-img">
+                        <span class="main__logo--text bold" style="font-size: 26px;">TFive</span>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Hồ sơ quán</a>
+                <a class="list-group-item list-group-item-action" data-toggle="collapse" href="#subTabDish"
+                    role="button" aria-expanded="false" aria-controls="collapseExample">Quản lý thực đơn
+                    <i class="fa-solid fa-angle-down icon-angle"></i>
+                </a>
+                <div class="collapse" id="subTabDish">
+                    <a href="#" class="list-group-item list-group-item-action sub-tabs">Quản lý danh mục món</a>
+                    <a href="#" class="list-group-item list-group-item-action sub-tabs">Quản lý món</a>
+                    <a href="#" class="list-group-item list-group-item-action sub-tabs">Quản lý voucher</a>
+                </div>
+                <a href="#" class="list-group-item list-group-item-action">Quản lý đơn hàng</a>
+                <a href="#" class="list-group-item list-group-item-action">Quản lý khách hàng</a>
+                <a href="#" class="list-group-item list-group-item-action">Quản lý tài xế</a>
+                <a href="#" class="list-group-item list-group-item-action">Thống kê</a>
+                <a href="#" class="list-group-item list-group-item-action">Đăng xuất</a>
+            </div>
+        </div>
+    </aside>
+
+
+    <main>
+        <div class="box-detail card">
+            <div class="box-order-detail">
+                <div class="head-order-detail">
+                    <div class="box-order-id">
+                        <p>Mã đơn hàng: <span class="order-id">123456</span></p>
+                    </div>
+                    <hr>
+                    <div class="row box-customer-info">
+                        <div class="head-info col-8">
+                            <img src="/assets/img/product/small-product/product1.webp" alt="Img-driver">
+                            <div class="box-info">
+                                <p class="bold customer-name">Tên khách</p>
+                                <p class="bland customer-address">Địa chỉ khách</p>
+                            </div>
+                        </div>
+                        <div class="box-btn-contact col-4">
+                            <button class="btn-contact"><i
+                                    class="fa-solid fa-phone"></i></button>
+                            <button class="btn-contact"><i
+                                    class="fa-solid fa-comment"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row box-driver-info">
+                        <div class="head-info col-8">
+                            <img src="/assets/img/product/small-product/product1.webp" alt="Img-driver">
+                            <div class="box-info">
+                                <p class="bold driver-name">Tên tài xế</p>
+                                <small class="bland driver-id">Mã tài xế</small>
+                            </div>
+                        </div>
+                        <div class="box-btn-contact col-4">
+                            <button class="btn-contact"><i
+                                    class="fa-solid fa-phone"></i></button>
+                            <button class="btn-contact"><i
+                                    class="fa-solid fa-comment"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-order-detail">
+                    <hr>
+                    <div class="box-time">
+                        <p>Lấy đơn trong <span class="delivevy-time bold" style="color: green;">29 phút</span></p>
+                        <p>Thời gian còn lại: <span class="time-left bold" style="color: red;">29 phút</span></p>
+                    </div>
+                    <hr>
+                    <div class="box-dish-list">
+                        <p class="bold">Chi tiết đơn hàng</p>
+                        <hr>
+                        <p class="bold">Menu</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="bold">#Tên món</th>
+                                    <th scope="col">SL</th>
+                                    <th scope="col" class="bold">Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">01. <span class="dish-name">Bánh mì</span>
+                                    </th>
+                                    <td class="quantity">4</td>
+                                    <td class="total-amount">12.000 đ</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">01. <span class="dish-name">Bánh mì</span>
+                                    </th>
+                                    <td class="quantity">4</td>
+                                    <td class="total-amount">12.000 đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="order-bill">
+                            <table class="w-50">
+                                <tbody>
+                                    <tr>
+                                        <th>Tổng tiền hàng</th>
+                                        <td>24.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Voucher từ cửa hàng</th>
+                                        <td>-6.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thành tiền</th>
+                                        <td>20.000đ</td>
+                                      </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="box-btn-alarm">
+                            <button class="btn-alarm btn-danger"><i class="fa-regular fa-bell"></i> Báo tài xế</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>

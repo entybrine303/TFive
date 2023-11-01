@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 @Controller
-@RequestMapping("tfive/admin")
+@RequestMapping("tfive/admin/order")
 public class ManagementOrderController {
 	
-	@GetMapping("management-order")
+	@GetMapping("view")
 	public String viewOrder(ModelMap model) {
 		
 		return "restaurantUI/managementOrder";

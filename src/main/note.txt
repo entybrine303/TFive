@@ -1,0 +1,7 @@
+Fill sp
+Tìm kiếm sp
+
+Làm thông báo khi add
+Làm thông báo xác nhận khi update, delete
+Thêm phần ghi chú vào quản lý đơn hàng
+Làm chức năng lọc theo giá, sắp xếp ở page menu

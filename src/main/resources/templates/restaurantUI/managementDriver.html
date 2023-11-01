@@ -86,7 +86,6 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Họ và tên</th>
-                                    <th scope="col">Giới tính</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Sđth</th>
                                     <th scope="col">CCCD</th>
@@ -94,14 +93,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr >
-                                    <td scope="row">Nguyễn Minh Thành</td>
-                                    <td>Nam</td>
-                                    <td>thanhducam@gmail.com</td>
-                                    <td>0708116524</td>
-                                    <td>0708116524 <i class="fa-solid fa-eye-slash"></i></td>
+                                <tr th:each="item : ${driverRegister}">
+                                    <td scope="row" th:text="${item.name}">Nguyễn Minh Thành</td>
+                                    <td th:text="${item.email}">thanhducam@gmail.com</td>
+                                    <td th:text="${item.phoneNumber}">0708116524</td>
+                                    <td th:text="${item.identificationCard}">0708116524 <i class="fa-solid fa-eye-slash"></i></td>
                                     <td><a class="edit" >Xác nhận</a>
-                                        | <a >Từ chối</a>
+                                        | <a th:href="@{'/tfive/admin/delete/'+${item.phoneNumber}}">Từ chối</a>
+
                                     </td>
                                 </tr>
                             </tbody>

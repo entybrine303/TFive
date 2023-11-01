@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{customerForm.html}">
+<head>
+<title>ĐĂNG KÍ TÀI XẾ</title>
+</head>
+
+<body>
+    <section layout:fragment="body">
+        <main class="main__content_wrapper">
+            <div class="container">
+                <div class="row c--box">
+                    <div class="box-form col-md-5 col-12">
+                        <form action="">
+                            <div class="box-register">
+                            <h3>Điền thông tin để đăng kí Tài xế</h3>
+                            <hr>
+                             <input id="name" type="text" placeholder="Họ và tên">
+                             <input type="email" placeholder="Email">
+                             <input type="text" placeholder="Số điện thoại">
+                             <input type="text" placeholder="Số CMND / CCCD">
+                             <hr>
+                             <button class="btn-register">Đăng kí</button>
+                         </div>
+                     </form>
+                    </div>
+                    <div class="box-intro col-md-7">
+                        <h2>Trở thành đối tác và đồng hành cùng chúng tôi</h2>
+                        <label for="name" class="c-btn-register"><i class="ti-arrow-circle-left"></i> ĐĂNG KÍ NGAY</label>
+                        
+                    </div>
+                </div>
+    
+            </div>
+        </main>
+        
+    </section>
+
+</body>
+</html>

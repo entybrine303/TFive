@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{restaurantForm.html}">
+<head>
+<title>QUẢN LÝ MÓN</title>
+</head>
+<body>
+    <section layout:fragment="body">
+        <main>
+            <div class="container box-main">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#management-dish" role="tab"
+                            aria-controls="management-dish" aria-selected="true">Quản lý món ăn</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#list-dish" role="tab"
+                            aria-controls="list-dish" aria-selected="false">Danh sách món ăn</a></li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+    
+                    <div class="tab-pane fade show active" id="management-dish" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="/admin/products/saveOrUpdate" method="post" class="card container form-management"
+                            enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="box-l col-sm-7">
+    
+                                    <label for="dish-id">ID Món </label>
+                                    <input type="text" id="dish-id" class="form-control" name="productId"
+                                        >
+                                    <label for="dish-name">Tên món </label>
+                                    <input type="text" id="dish-name" class="form-control" name="name" >
+                                    <label for="price">Giá </label>
+                                    <input type="number" id="price" class="form-control" name="price" >
+                                    <label for="categories">Danh mục món</label>
+                                    <select id="categories" class="form-control t-select" name="facture"
+                                        >
+                                        <option value="Samsung">Samsung</option>
+                                        <option value="Xiaomi">Xiaomi</option>
+                                    </select>
+                                    <label for="status">Trạng thái</label>
+                                    <select id="status" name="facture" class="form-control t-select" >
+                                        <option value="iPhone">Còn món</option>
+                                        <option value="Samsung">Tạm hết</option>
+                                    </select>
+                                    <label for="description" class="w-100">Mô tả của món
+                                    </label>
+                                    <textarea class="w-100" id="description" rows="4" name="description"></textarea>
+                                </div>
+    
+                                <div class="box-r col-sm-5">
+                                    <script>
+                                        function chooseFile(fileInput) {
+                                            if (fileInput.files
+                                                && fileInput.files[0]) {
+                                                var reader = new FileReader();
+                                                reader.onload = function (e) {
+                                                    $('#img-product').attr(
+                                                        'src',
+                                                        e.target.result);
+                                                }
+    
+                                                reader
+                                                    .readAsDataURL(fileInput.files[0])
+                                            }
+                                        }
+                                    </script>
+                                    <div class="box-img">
+                                        <img id="img-product" alt=""
+                                        src="/assets/img/product/main-product/product1.webp"
+                                            width="80%"> 
+                                            <input type="file" onchange="chooseFile(this)" name="imgFile">
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                            <div class="box-btn">
+    
+                                <button class="btn btn-info">Save</button>
+    
+                                <a><button type="reset" class="btn btn-primary">Reset</button></a>
+    
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="tab-pane fade" id="list-dish" role="tabpanel" aria-labelledby="profile-tab">
+                        <table class="table tbl-cart">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">ID Món</th>
+                                    <th scope="col">Tên món</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Danh mục</th>
+                                    <th scope="col">Trạng thái</th>
+                                    <th scope="col">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td scope="row">D123</td>
+                                    <td scope="row">Bánh mì</td>
+                                    <td>13.000</td>
+                                    <td>Đồ ăn vặt</td>
+                                    <td>Còn món</td>
+                                    <td><a class="edit" >Edit</a>
+                                        | <a >Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </main>
+        
+    </section>
+
+</body>
+
+</html>

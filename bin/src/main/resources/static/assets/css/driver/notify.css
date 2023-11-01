@@ -1,0 +1,46 @@
+hr{
+  margin: 0;
+}
+
+/* NAV */
+.t-nav {
+  text-align: center;
+}
+
+/* NEWS */
+.news-describe {
+  background-color: #fef8e2;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.box-news{
+  padding: 10px 16px;
+  background-color: #FEF4F3;
+}
+
+.news-describe .icon-bell {
+  background-color: #f48b0a;
+  border-radius: 14px;
+  padding: 6px;
+  margin-right: 6px;
+}
+
+.news-title{
+
+}
+
+.news-summary,
+.news-detail{
+  font-size: 16px;
+}
+
+.news-detail{
+  padding: 8px 0;
+}
+
+.news-date{
+  font-size: 14px;
+}
+
+

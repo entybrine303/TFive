@@ -42,57 +42,11 @@
             <section class="categories__section section--padding">
                 <div class="container">
                     <div class="row mb--n25 list-categories">
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mb-25 box-categories">
+                        <div th:each="item : ${categories}" class="col-lg-2 col-md-4 col-sm-4 col-6 mb-25 box-categories">
                             <div class="categories__card text-center">
-                                <a class="categories__card--link" href="shop.html">
-                                    <h2 class="categories__title categories-name">Coffe</h2>
+                                <a class="categories__card--link" th:href="@{/tfive/menu}">
+                                    <h2 class="categories__title categories-name" th:text="${item.name}">Coffe</h2>
                                     <span class="categories__subtitle categories-dish-total">(9 items)</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mb-25 box-categories">
-                            <div class="categories__card text-center">
-                                <a class="categories__card--link" href="shop.html">
-    
-                                    <h2 class="categories__title categories-name">Kem</h2>
-                                    <span class="categories__subtitle categories-dish-total">(1 items)</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mb-25 box-categories">
-                            <div class="categories__card text-center">
-                                <a class="categories__card--link" href="shop.html">
-    
-                                    <h2 class="categories__title categories-name">Trà</h2>
-                                    <span class="categories__subtitle categories-dish-total">(4 items)</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mb-25 box-categories">
-                            <div class="categories__card text-center">
-                                <a class="categories__card--link" href="shop.html">
-    
-                                    <h2 class="categories__title categories-name">Nước ép</h2>
-                                    <span class="categories__subtitle categories-dish-total">(8 items)</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mb-25 box-categories">
-                            <div class="categories__card text-center">
-                                <a class="categories__card--link" href="shop.html">
-    
-                                    <h2 class="categories__title categories-name">Đặc biệt</h2>
-                                    <span class="categories__subtitle categories-dish-total">(6 items)</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mb-25 box-categories">
-                            <div class="categories__card text-center">
-                                <a class="categories__card--link" href="shop.html">
-    
-                                    </span>
-                                    <h2 class="categories__title categories-name">Đồ ăn vặt</h2>
-                                    <span class="categories__subtitle categories-dish-total">(3 items)</span>
                                 </a>
                             </div>
                         </div>
